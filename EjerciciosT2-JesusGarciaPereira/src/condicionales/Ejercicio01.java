@@ -52,11 +52,11 @@ public class Ejercicio01 {
 		// Si el número tiene tres cifras...
 		else if (num >= 100 && num < 1000)
 			// ... el valor de esCapicua dependerá del resultado de esta expresión
-			esCapicua = num / 100 == num % 100 % 10;
+			esCapicua = num / 100 == num % 10;
 		// Si el número tiene cuatro cifras...
 		else if (num >= 1000 && num < 10000)
 			// ... el valor de esCapicua dependerá del resultado de esta expresión
-			esCapicua = num / 1000 == num % 1000 % 100 % 10 && num / 100 % 10 == num % 100 / 10;
+			esCapicua = num / 1000 == num % 10 && num / 100 % 10 == num % 100 / 10;
 		// Mostramos la primera parte del resultado
 		System.out.print("El número " + num);
 		// Si el valor de capicuaEs es true, mostrará que lo es
