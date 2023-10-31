@@ -44,27 +44,31 @@ public class Ejercicio01 {
 		}
 		// Si el número sólo tiene una cifra...
 		if (num < 10)
-			esCapicua = true; // ... siempre es capicúa
+			// ... siempre es capicúa
+			esCapicua = true;
 		// Si el número tiene dos cifras...
 		else if (num >= 10 && num < 100)
-			// ... el valor de esCapicua dependerá del resultado de esta expresión
+			// ... el valor de esCapicua dependerá de si la decena y la unidad son iguales
 			esCapicua = num / 10 == num % 10;
 		// Si el número tiene tres cifras...
 		else if (num >= 100 && num < 1000)
-			// ... el valor de esCapicua dependerá del resultado de esta expresión
+			// ... el valor de esCapicua dependerá de si la centena y la unidad son iguales
 			esCapicua = num / 100 == num % 10;
 		// Si el número tiene cuatro cifras...
 		else if (num >= 1000 && num < 10000)
-			// ... el valor de esCapicua dependerá del resultado de esta expresión
-			esCapicua = num / 1000 == num % 10 && num / 100 % 10 == num % 100 / 10;
+			/*
+			 * ... el valor de esCapicua dependerá de si tanto la unidad de millar como la
+			 * unidad son iguales entre sí, y si la centena y la decena son iguales entre sí
+			 */
+			esCapicua = num / 1000 == num % 10 && num / 100 % 10 == num / 10 % 10;
 		// Mostramos la primera parte del resultado
 		System.out.print("El número " + num);
 		// Si el valor de capicuaEs es true, mostrará que lo es
 		if (esCapicua)
-			System.out.println(" es capicúa"); 
+			System.out.println(" es capicúa");
 		// En caso contrario, mostrará que no lo es
 		else
-			System.out.println(" no es capicúa"); 
+			System.out.println(" no es capicúa");
 		// Cerramos el Scanner
 		sc.close();
 	}
