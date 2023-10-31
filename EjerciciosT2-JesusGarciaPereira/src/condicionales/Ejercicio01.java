@@ -4,35 +4,68 @@ import java.util.Scanner;
 
 public class Ejercicio01 {
 
+	/*
+	 * ENTRADA: -1 | RESULTADO ESPERADO: Número incorrecto, sólo validos desde el 0
+	 * hasta el 9999
+	 */
+	// ENTRADA: 1 | RESULTADO ESPERADO: El número 1 es capicúa
+	// ENTRADA: 33 | RESULTADO ESPERADO: El número 33 es capicúa
+	// ENTRADA: 45 | RESULTADO ESPERADO: El número 45 no es capicúa
+	// ENTRADA: 464 | RESULTADO ESPERADO: El número 464 es capicúa
+	// ENTRADA: 478 | RESULTADO ESPERADO: El número 478 no es capicúa
+	// ENTRADA: 3553 | RESULTADO ESPERADO: El número 3553 es capicúa
+	// ENTRADA: 4564 | RESULTADO ESPERADO: El número 4564 no es capicúa
+	/*
+	 * ENTRADA: 10000 | RESULTADO ESPERADO: Número incorrecto, sólo validos desde el
+	 * 0 hasta el 9999
+	 */
+
 	public static void main(String[] args) {
+		// Declaramos la variable del número que le pediremos al usuario
 		int num;
-		boolean capicuaEs = false;
+		// Declaramos una variable boolean para determinar si un número es capicua
+		boolean esCapicua = false;
+		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
+		// Presentamos el programa
 		System.out.println("Capicúa");
-		//¿Dónde poner el while?
-		System.out.println("Introduzca un número entre 0 y 9999 y analizaré si es capicúa o no");
+		// Le pedimos al usuario un número
+		System.out.println("Introduzca un número entre 0 y 9999, analizaré si es capicúa o no");
+		// Leemos el número
 		num = sc.nextInt();
+		/*
+		 * Si el número se sale de los márgenes le indicamos el error y pediremos otro
+		 * todas las veces necesarias hasta que introduzca un número correcto
+		 */
 		while (num < 0 || num > 9999) {
 			System.out.println("Número incorrecto, sólo validos desde el 0 hasta el 9999");
 			System.out.println("Introduzca otro número");
 			num = sc.nextInt();
 		}
-		//¿Todo en un solo if?
+		// Si el número sólo tiene una cifra...
 		if (num < 10)
-			capicuaEs = true;
-		else if (num >= 10 && num < 100 && num / 10 == num % 10)
-			capicuaEs = true;
-		else if (num >= 100 && num < 1000 && num / 100 == num % 100 % 10)
-			capicuaEs = true;
-		else if (num >= 1000 && num < 10000 && num / 1000 == num % 1000 % 100 % 10 && num / 100 % 10 == num % 100 / 10)
-			capicuaEs = true;
-
+			esCapicua = true; // ... siempre es capicúa
+		// Si el número tiene dos cifras...
+		else if (num >= 10 && num < 100)
+			// ... el valor de esCapicua dependerá del resultado de esta expresión
+			esCapicua = num / 10 == num % 10;
+		// Si el número tiene tres cifras...
+		else if (num >= 100 && num < 1000)
+			// ... el valor de esCapicua dependerá del resultado de esta expresión
+			esCapicua = num / 100 == num % 100 % 10;
+		// Si el número tiene cuatro cifras...
+		else if (num >= 1000 && num < 10000)
+			// ... el valor de esCapicua dependerá del resultado de esta expresión
+			esCapicua = num / 1000 == num % 1000 % 100 % 10 && num / 100 % 10 == num % 100 / 10;
+		// Mostramos la primera parte del resultado
 		System.out.print("El número " + num);
-		if (capicuaEs == true)
-			System.out.println(" es capicúa");
+		// Si el valor de capicuaEs es true, mostrará que lo es
+		if (esCapicua)
+			System.out.println(" es capicúa"); 
+		// En caso contrario, mostrará que no lo es
 		else
-			System.out.println(" no es capicúa");
-
+			System.out.println(" no es capicúa"); 
+		// Cerramos el Scanner
 		sc.close();
 	}
 }
