@@ -3,11 +3,13 @@ package condicionales;
 import java.util.Scanner;
 
 public class Ejercicio02 {
+	
 	/*
 	 * ENTRADA: 5687345 | RESULTADO ESPERADO: DNI incorrecto, sólo validos números
 	 * de 8 cifras
 	 */
 	// ENTRADA: 77816487 | RESULTADO ESPERADO: Su NIF es: N
+	// ENTRADA: 27289684 | RESULTADO ESPERADO: Su NIF es: T
 	/*
 	 * ENTRADA: 100000000 | RESULTADO ESPERADO: DNI incorrecto, sólo validos números
 	 * de 8 cifras
