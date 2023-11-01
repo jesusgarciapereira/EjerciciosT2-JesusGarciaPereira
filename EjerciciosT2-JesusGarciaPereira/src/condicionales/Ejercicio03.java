@@ -102,15 +102,9 @@ public class Ejercicio03 {
 		}
 		/*
 		 * Si la cantidad de comida comprada es igual o superior a la consumida por los
-		 * animales...
+		 * animales, el valor de hayComida es true; por el contrario, será false
 		 */
-		if (comidaComprada >= kilosComidosTotal)
-			// ... el valor de hayComida es true
-			hayComida = true;
-		// En caso contrario...
-		else
-			// ... el valor de hayComida es false
-			hayComida = false;
+		hayComida = (comidaComprada >= kilosComidosTotal) ? true : false;
 		// Si el número de animales es 0, mostraremos el siguiente mensaje
 		if (numAnimales == 0)
 			System.out.println("No hay animales en la granja que consuman la comida comprada");
