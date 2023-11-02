@@ -12,32 +12,25 @@ public class Ejercicio03 {
 	/*
 	 * ENTRADA: -1 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números desde
 	 * el 0
-	 */
-	/*
+	 * 
 	 * ENTRADA: 100 -1 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números
 	 * desde el 0
-	 */
-	/*
+	 * 
 	 * ENTRADA: 100 10 0 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números
 	 * mayores que 0
-	 */
-	/*
+	 * 
 	 * ENTRADA: 100 0 50 | RESULTADO ESPERADO: No hay animales en la granja que
 	 * consuman la comida comprada
-	 */
-	/*
+	 * 
 	 * ENTRADA: 0 0 50 | RESULTADO ESPERADO: No hay animales en la granja que
 	 * consuman la comida comprada
-	 */
-	/*
+	 * 
 	 * ENTRADA: 100 10 50 | RESULTADO ESPERADO: Hoy disponemos de suficiente
 	 * alimento para cada animal
-	 */
-	/*
+	 * 
 	 * ENTRADA: 0 10 50 | RESULTADO ESPERADO: Hoy los animales no tienen nada que
 	 * comer
-	 */
-	/*
+	 * 
 	 * ENTRADA: 50 10 100 | RESULTADO ESPERADO: Hoy sería necesario racionarla a 5.0
 	 * kg por animal
 	 */
