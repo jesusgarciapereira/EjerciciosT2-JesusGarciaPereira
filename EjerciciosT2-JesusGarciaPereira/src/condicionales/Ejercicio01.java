@@ -55,7 +55,7 @@ public class Ejercicio01 {
 			// ... el valor de esCapicua dependerá de si la centena y la unidad son iguales
 			esCapicua = num / 100 == num % 10;
 		// Si el número tiene cuatro cifras...
-		else if (num >= 1000 && num < 10000)
+		else 
 			/*
 			 * ... el valor de esCapicua dependerá de si tanto la unidad de millar como la
 			 * unidad son iguales entre sí, y si la centena y la decena son iguales entre sí
