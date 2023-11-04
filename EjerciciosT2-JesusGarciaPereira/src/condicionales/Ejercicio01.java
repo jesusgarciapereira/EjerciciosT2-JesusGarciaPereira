@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Ejercicio01 {
 
+	// ENTRADA: 5.4 | RESULTADO ESPERADO: El dato introducido no es correcto
+	// ENTRADA: Hola | RESULTADO ESPERADO: El dato introducido no es correcto
 	/*
 	 * ENTRADA: -1 | RESULTADO ESPERADO: Número incorrecto, sólo validos desde el 0
 	 * hasta el 9999
@@ -42,9 +44,9 @@ public class Ejercicio01 {
 				// Leemos el número
 				num = sc.nextInt();
 				/*
-				 * Si he introducido un dato incorrecto se ejecutará directamente el catch y el
-				 * valor de correcto seguirá siendo false. Por el contrario se asignará como
-				 * true
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
+				 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
 				 */
 				correcto = true;
 				/*
@@ -83,13 +85,14 @@ public class Ejercicio01 {
 				// En caso contrario, mostrará que no lo es
 				else
 					System.out.println(" no es capicúa");
-				// Si he introducido un dato incorrecto, se ejecutarán estas instrucciones
+				// Si he introducido un dato incorrecto...
 			} catch (InputMismatchException e) {
+				// ... se mostrará el siguiente resultado
 				System.out.println("El dato introducido no es correcto");
 				// Para evitar un bucle infinito
 				sc.nextLine();
 			}
-		} while (correcto == false);	 /*
+		} while (correcto == false); /*
 										 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca un
 										 * dato correcrto
 										 */
