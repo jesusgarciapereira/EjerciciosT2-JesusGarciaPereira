@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ejercicio02 {
 	
 	// ENTRADA: 56789.4 | RESULTADO ESPERADO: El dato introducido no es correcto
-	// ENTRADA: Hola | RESULTADO ESPERADO: El dato introducido no es correcto
+	// ENTRADA: Mi dni es 77816487 | RESULTADO ESPERADO: El dato introducido no es correcto
 	/*
 	 * ENTRADA: 5687345 | RESULTADO ESPERADO: DNI incorrecto, sólo validos números
 	 * de 8 cifras
