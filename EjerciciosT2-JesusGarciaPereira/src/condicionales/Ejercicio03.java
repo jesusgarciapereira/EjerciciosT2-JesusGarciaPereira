@@ -10,6 +10,12 @@ public class Ejercicio03 {
 	// 1 - Cantidad de comida comprada
 	// 2 - Número de animales en la granja
 	// 3 - Cantidad de comida que comen los animales
+
+	// ENTRADA: 100,5 | RESULTADO ESPERADO: El dato introducido no es correcto
+	// ENTRADA: 100 Una vaca | RESULTADO ESPERADO: El dato introducido no es
+	// correcto
+	// ENTRADA: 100 3 Comen mucho | RESULTADO ESPERADO: El dato introducido no es
+	// correcto
 	/*
 	 * ENTRADA: -1 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números desde
 	 * el 0
@@ -47,6 +53,10 @@ public class Ejercicio03 {
 		double kilosComidosPorAnimal;
 		// Declaramos una variable boolean para determinar si hay comida
 		boolean hayComida;
+		/*
+		 * Declaramos tres variables boolean diferentes para determinar si cada uno de
+		 * los datos han sido introducidos correctamente
+		 */
 		boolean compradoCorrecto = false;
 		boolean animalCorrecto = false;
 		boolean kilosComidosCorrecto = false;
@@ -63,6 +73,12 @@ public class Ejercicio03 {
 						"Introduzca la cantidad de comida comprada hoy (en kg y, si tiene decimales, use un punto como en el ejemplo 100.5)");
 				// Leemos el número
 				comidaComprada = sc.nextDouble();
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de compradoCorrecto seguirá siendo false.
+				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
+				 * siguientes
+				 */
 				compradoCorrecto = true;
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
@@ -77,6 +93,12 @@ public class Ejercicio03 {
 				System.out.println("Introduzca el número de animales que hay en la granja");
 				// Leemos el número
 				numAnimales = sc.nextInt();
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de animalCorrecto seguirá siendo false.
+				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
+				 * siguientes
+				 */
 				animalCorrecto = true;
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
@@ -92,6 +114,12 @@ public class Ejercicio03 {
 						"Introduzca los kilos de comida que comen todos los animales a diario (si tiene decimales, recuerde usar un punto)");
 				// Leemos el número
 				kilosComidosTotal = sc.nextDouble();
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de kilosComidosCorrecto seguirá siendo
+				 * false. Por el contrario se asignará como true y se ejecutarán las
+				 * instrucciones siguientes
+				 */
 				kilosComidosCorrecto = true;
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
@@ -128,12 +156,19 @@ public class Ejercicio03 {
 						}
 					}
 				}
+				// Si he introducido algún dato incorrecto...
 			} catch (InputMismatchException e) {
+				// ... se mostrará el siguiente resultado
 				System.out.println("El dato introducido no es correcto");
+				// Para evitar un bucle infinito
 				sc.nextLine();
 			}
-			
-		} while (compradoCorrecto == false || animalCorrecto == false || kilosComidosCorrecto == false);
+
+		} while (compradoCorrecto == false || animalCorrecto == false
+				|| kilosComidosCorrecto == false); /*
+													 * Se ejecutarán de nuevo las instrucciones del do, hasta que se
+													 * introduzcan todos los datos correctamente
+													 */
 		// Cerramos el Scanner
 		sc.close();
 	}
