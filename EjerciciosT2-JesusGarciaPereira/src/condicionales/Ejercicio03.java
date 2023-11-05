@@ -48,6 +48,8 @@ public class Ejercicio03 {
 		// Declaramos una variable boolean para determinar si hay comida
 		boolean hayComida;
 		boolean compradoCorrecto = false;
+		boolean animalCorrecto = false;
+		boolean kilosComidosCorrecto = false;
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
 		// Para poder escribir en la consola decimales con punto
@@ -75,6 +77,7 @@ public class Ejercicio03 {
 				System.out.println("Introduzca el número de animales que hay en la granja");
 				// Leemos el número
 				numAnimales = sc.nextInt();
+				animalCorrecto = true;
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
 				 * las veces necesarias hasta que introduzca un número correcto
@@ -89,6 +92,7 @@ public class Ejercicio03 {
 						"Introduzca los kilos de comida que comen todos los animales a diario (si tiene decimales, recuerde usar un punto)");
 				// Leemos el número
 				kilosComidosTotal = sc.nextDouble();
+				kilosComidosCorrecto = true;
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
 				 * las veces necesarias hasta que introduzca un número correcto
@@ -129,7 +133,7 @@ public class Ejercicio03 {
 				sc.nextLine();
 			}
 			
-		} while (compradoCorrecto == false);
+		} while (compradoCorrecto == false || animalCorrecto == false || kilosComidosCorrecto == false);
 		// Cerramos el Scanner
 		sc.close();
 	}
