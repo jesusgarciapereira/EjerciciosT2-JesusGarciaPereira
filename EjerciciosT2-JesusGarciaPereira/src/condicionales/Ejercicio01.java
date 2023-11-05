@@ -94,7 +94,7 @@ public class Ejercicio01 {
 			}
 		} while (correcto == false); /*
 										 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca un
-										 * dato correcrto
+										 * dato correcto
 										 */
 		// Cerramos el Scanner
 		sc.close();
