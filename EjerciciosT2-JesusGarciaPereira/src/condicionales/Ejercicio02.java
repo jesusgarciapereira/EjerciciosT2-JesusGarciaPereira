@@ -39,12 +39,6 @@ public class Ejercicio02 {
 				// Leemos el número
 				dni = sc.nextInt();
 				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
-				 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
-				 */
-				correcto = true;
-				/*
 				 * Si el número se sale de los márgenes le indicamos el error y pediremos otro
 				 * todas las veces necesarias hasta que introduzca un número correcto
 				 */
@@ -53,6 +47,12 @@ public class Ejercicio02 {
 					System.out.println("Introdúzcalo de nuevo");
 					dni = sc.nextInt();
 				}
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
+				 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
+				 */
+				correcto = true;
 				// El valor del NIF dependerá de cada posible resultado de: dni % 23
 				nif = switch (dni % 23) {
 				case 0 -> 'T';

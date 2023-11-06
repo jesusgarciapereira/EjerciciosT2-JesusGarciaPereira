@@ -46,12 +46,6 @@ public class Ejercicio04 {
 				// Leemos el número
 				num = sc.nextInt();
 				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
-				 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
-				 */
-				correcto = true;
-				/*
 				 * Si el número se sale de los márgenes le indicamos el error y pediremos otro
 				 * todas las veces necesarias hasta que introduzca un número correcto
 				 */
@@ -60,6 +54,12 @@ public class Ejercicio04 {
 					System.out.println("Introduzca otro número");
 					num = sc.nextInt();
 				}
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
+				 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
+				 */
+				correcto = true;
 				// El texto de la unidad dependerá de cada posible resultado de: num % 10
 				unidadTexto = switch (num % 10) {
 				case 1 -> "uno";

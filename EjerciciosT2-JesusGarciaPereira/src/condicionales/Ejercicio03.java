@@ -74,13 +74,6 @@ public class Ejercicio03 {
 				// Leemos el número
 				comidaComprada = sc.nextDouble();
 				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de compradoCorrecto seguirá siendo false.
-				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
-				 * siguientes
-				 */
-				compradoCorrecto = true;
-				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
 				 * las veces necesarias hasta que introduzca un número correcto
 				 */
@@ -89,17 +82,18 @@ public class Ejercicio03 {
 					System.out.println("Introduzca otro número");
 					comidaComprada = sc.nextDouble();
 				}
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de compradoCorrecto seguirá siendo false.
+				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
+				 * siguientes
+				 */
+				compradoCorrecto = true;
 				// Le pedimos al usuario el número de animales
 				System.out.println("Introduzca el número de animales que hay en la granja");
 				// Leemos el número
 				numAnimales = sc.nextInt();
-				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de animalCorrecto seguirá siendo false.
-				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
-				 * siguientes
-				 */
-				animalCorrecto = true;
+				
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
 				 * las veces necesarias hasta que introduzca un número correcto
@@ -109,18 +103,18 @@ public class Ejercicio03 {
 					System.out.println("Introduzca otro número");
 					numAnimales = sc.nextInt();
 				}
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de animalCorrecto seguirá siendo false.
+				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
+				 * siguientes
+				 */
+				animalCorrecto = true;
 				// Le pedimos al usuario los kilos consumidos en total por los animales
 				System.out.println(
 						"Introduzca los kilos de comida que comen todos los animales a diario (si tiene decimales, recuerde usar un punto)");
 				// Leemos el número
 				kilosComidosTotal = sc.nextDouble();
-				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de kilosComidosCorrecto seguirá siendo
-				 * false. Por el contrario se asignará como true y se ejecutarán las
-				 * instrucciones siguientes
-				 */
-				kilosComidosCorrecto = true;
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
 				 * las veces necesarias hasta que introduzca un número correcto
@@ -130,6 +124,13 @@ public class Ejercicio03 {
 					System.out.println("Introduzca otro número");
 					kilosComidosTotal = sc.nextDouble();
 				}
+				/*
+				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * instrucciones del catch y el valor de kilosComidosCorrecto seguirá siendo
+				 * false. Por el contrario se asignará como true y se ejecutarán las
+				 * instrucciones siguientes
+				 */
+				kilosComidosCorrecto = true;
 				/*
 				 * Si la cantidad de comida comprada es igual o superior a la consumida por los
 				 * animales, el valor de hayComida es true; por el contrario, será false
