@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio06 {
+	
 	/*
 	 * SALIDA: 77 + 34 = ¿? | ENTRADA: 11.1 | RESULTADO ESPERADO: El dato
 	 * introducido no es válido
@@ -18,6 +19,7 @@ public class Ejercicio06 {
 	 * SALIDA: 54 + 96 = ¿? | ENTRADA: 100 | RESULTADO ESPERADO: Lo siento, la
 	 * solución es 54 + 96 = 150
 	 */
+	
 	public static void main(String[] args) {
 		// Declaramos las variables de los números aleatorios que generará el programa
 		int aleatorio1, aleatorio2;
