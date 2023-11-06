@@ -9,6 +9,7 @@ public class Ejercicio04 {
 	 * ENTRADA: cuarenta y cuatro | RESULTADO ESPERADO: El dato introducido no es
 	 * correcto
 	 */
+	// ENTRADA: 56.4 | RESULTADO ESPERADO: El dato introducido no es correcto
 	/*
 	 * ENTRADA: 0 | RESULTADO ESPERADO: Número incorrecto, sólo validos desde el 1
 	 * hasta el 99
