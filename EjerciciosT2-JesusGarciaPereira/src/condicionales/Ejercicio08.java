@@ -41,7 +41,7 @@ public class Ejercicio08 {
 		 * Declaramos la variables de la distancia y los días que le pediremos al
 		 * usuario
 		 */
-		double distancia;
+		double distancia = 0.0;
 		int dias;
 		// Declaramos las variables de los precios que mostraremos
 		double precioSinDescuento, precioConDescuento;
@@ -80,6 +80,19 @@ public class Ejercicio08 {
 				 * siguientes
 				 */
 				distanciaCorrecto = true;
+				// Si he introducido un dato incorrecto...
+							} catch (InputMismatchException e) {
+								// ... se mostrará el siguiente resultado
+								System.out.println("El dato introducido no es correcto");
+								// Para evitar un bucle infinito
+								sc.nextLine();
+							}
+						} while (distanciaCorrecto == false); /*
+															 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
+															 * el dato correctamente
+															 */
+		do {
+			try {
 				// Le pedimos al usuario los días
 				System.out.println("Indique el número de días de instancia");
 				// Leemos el número
@@ -120,10 +133,9 @@ public class Ejercicio08 {
 				// Para evitar un bucle infinito
 				sc.nextLine();
 			}
-		} while (distanciaCorrecto == false
-				|| diasCorrecto == false); /*
-											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzcan
-											 * todos los datos correctamente
+		} while (diasCorrecto == false); /*
+											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
+											 * el dato correctamente
 											 */
 		// Cerramos el Scanner
 		sc.close();
