@@ -1,6 +1,5 @@
 package bucles;
 
-
 import java.util.Scanner;
 
 public class Ejercicio04 {
@@ -13,9 +12,11 @@ public class Ejercicio04 {
 		a = sc.nextInt();
 		System.out.println("Introduzca un valor para b");
 		b = sc.nextInt();
-		for (int i = a; i > 0; i--) {
+		for (int i = a; i >= 1; i--) {
 			if (a % i == 0 && b % i == 0) {
-				System.out.println("m.c.d.(" + a + "," + b + ") = " + i);
+				System.out.print("m.c.d.(" + a + "," + b + ") = " + i);
+				if (i == 1)
+					System.out.println(" | " + a + " y " + b + " son primos entre sí");
 				break;
 			}
 		}
