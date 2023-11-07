@@ -31,7 +31,7 @@ public class Ejercicio02 {
 		boolean correcto = false;
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
-		// Activamos el Scanner
+		// Presentamos el programa
 		System.out.println("Cantidad de números primos entre 1 y n");
 		do {
 			try {
