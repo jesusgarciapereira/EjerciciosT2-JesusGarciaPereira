@@ -89,6 +89,7 @@ public class Ejercicio03 {
 				 * siguientes
 				 */
 				compradoCorrecto = true;
+				
 				// Le pedimos al usuario el número de animales
 				System.out.println("Introduzca el número de animales que hay en la granja");
 				// Leemos el número
