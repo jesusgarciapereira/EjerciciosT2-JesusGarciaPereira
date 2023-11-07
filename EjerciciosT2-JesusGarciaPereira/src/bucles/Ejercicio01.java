@@ -37,7 +37,10 @@ public class Ejercicio01 {
 		 * Declaramos la variables de las horas, minutos, segundos y los segundos
 		 * incrementados que le pediremos al usuario
 		 */
-		int horas, minutos, segundos, segundosIncrementados;
+		int horas = 0;
+		int minutos = 0;
+		int segundos = 0;
+		int segundosIncrementados;
 		/*
 		 * Declaramos tres variables boolean diferentes para determinar si cada uno de
 		 * los datos han sido introducidos correctamente
@@ -73,6 +76,19 @@ public class Ejercicio01 {
 				 * siguientes
 				 */
 				horasCorrecto = true;
+				// Si he introducido un dato incorrecto...
+			} catch (InputMismatchException e) {
+				// ... se mostrará el siguiente resultado
+				System.out.println("El dato introducido no es correcto");
+				// Para evitar un bucle infinito
+				sc.nextLine();
+			}
+		} while (horasCorrecto == false); /*
+											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
+											 * el dato correctamente
+											 */
+		do {
+			try {
 				// Le pedimos al usuario los minutos
 				System.out.println("Introduzca el número correspondiente a los minutos");
 				// Leemos el número
@@ -94,6 +110,19 @@ public class Ejercicio01 {
 				 * siguientes
 				 */
 				minutosCorrecto = true;
+				// Si he introducido un dato incorrecto...
+			} catch (InputMismatchException e) {
+				// ... se mostrará el siguiente resultado
+				System.out.println("El dato introducido no es correcto");
+				// Para evitar un bucle infinito
+				sc.nextLine();
+			}
+		} while (minutosCorrecto == false); /*
+											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
+											 * el dato correctamente
+											 */
+		do {
+			try {
 				// Le pedimos al usuario los segundos
 				System.out.println("Introduzca el número correspondiente a los segundos");
 				// Leemos el número
@@ -115,6 +144,19 @@ public class Ejercicio01 {
 				 * siguientes
 				 */
 				segundosCorrecto = true;
+				// Si he introducido un dato incorrecto...
+			} catch (InputMismatchException e) {
+				// ... se mostrará el siguiente resultado
+				System.out.println("El dato introducido no es correcto");
+				// Para evitar un bucle infinito
+				sc.nextLine();
+			}
+		} while (segundosCorrecto == false); /*
+												 * Se ejecutarán de nuevo las instrucciones del do, hasta que se
+												 * introduzca el dato correctamente
+												 */
+		do {
+			try {
 				// Le pedimos al usuario los segundos a incrementar
 				System.out.println("Introduzca la cantidad de segundos a incrementar");
 				// Leemos el número
@@ -182,10 +224,9 @@ public class Ejercicio01 {
 				// Para evitar un bucle infinito
 				sc.nextLine();
 			}
-		} while (horasCorrecto == false || minutosCorrecto == false || segundosCorrecto == false
-				|| segundosIncrementadosCorrecto == false); /*
+		} while (segundosIncrementadosCorrecto == false); /*
 															 * Se ejecutarán de nuevo las instrucciones del do, hasta
-															 * que se introduzcan todos los datos correctamente
+															 * que se introduzca el dato correctamente
 															 */
 		// Cerramos el Scanner
 		sc.close();
