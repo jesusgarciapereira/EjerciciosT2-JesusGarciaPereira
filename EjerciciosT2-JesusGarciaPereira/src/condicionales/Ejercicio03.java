@@ -11,12 +11,15 @@ public class Ejercicio03 {
 	// 2 - Número de animales en la granja
 	// 3 - Cantidad de comida que comen los animales
 
-	// ENTRADA: 100,5 | RESULTADO ESPERADO: El dato introducido no es correcto
-	// ENTRADA: 100 Una vaca | RESULTADO ESPERADO: El dato introducido no es
-	// correcto
-	// ENTRADA: 100 3 Comen mucho | RESULTADO ESPERADO: El dato introducido no es
-	// correcto
 	/*
+	 * ENTRADA: 100,5 | RESULTADO ESPERADO: El dato introducido no es correcto
+	 *
+	 * ENTRADA: 100 Una vaca | RESULTADO ESPERADO: El dato introducido no es
+	 * correcto
+	 *
+	 * ENTRADA: 100 3 Comen mucho | RESULTADO ESPERADO: El dato introducido no es
+	 * correcto
+	 *
 	 * ENTRADA: -1 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números desde
 	 * el 0
 	 * 
@@ -47,8 +50,9 @@ public class Ejercicio03 {
 		 * Declaramos las variables del número de animales, comida comprada y kilos
 		 * comidos en total que le pediremos al usuario
 		 */
-		int numAnimales;
-		double comidaComprada, kilosComidosTotal;
+		int numAnimales = 0;
+		double comidaComprada = 0.0;
+		double kilosComidosTotal;
 		// Declaramos la variable de kilos comidos por animal que mostraremos
 		double kilosComidosPorAnimal;
 		// Declaramos una variable boolean para determinar si hay comida
@@ -89,12 +93,24 @@ public class Ejercicio03 {
 				 * siguientes
 				 */
 				compradoCorrecto = true;
-				
+				// Si he introducido algún dato incorrecto...
+			} catch (InputMismatchException e) {
+				// ... se mostrará el siguiente resultado
+				System.out.println("El dato introducido no es correcto");
+				// Para evitar un bucle infinito
+				sc.nextLine();
+			}
+		} while (compradoCorrecto == false); /*
+												 * Se ejecutarán de nuevo las instrucciones del do, hasta que se
+												 * introduzca el dato correctamente
+												 */
+		do {
+			try {
 				// Le pedimos al usuario el número de animales
 				System.out.println("Introduzca el número de animales que hay en la granja");
 				// Leemos el número
 				numAnimales = sc.nextInt();
-				
+
 				/*
 				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
 				 * las veces necesarias hasta que introduzca un número correcto
@@ -111,6 +127,21 @@ public class Ejercicio03 {
 				 * siguientes
 				 */
 				animalCorrecto = true;
+				// Si he introducido algún dato incorrecto...
+			} catch (InputMismatchException e) {
+				// ... se mostrará el siguiente resultado
+				System.out.println("El dato introducido no es correcto");
+				// Para evitar un bucle infinito
+				sc.nextLine();
+			}
+
+		} while (animalCorrecto == false); /*
+											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
+											 * el dato correctamente
+											 */
+
+		do {
+			try {
 				// Le pedimos al usuario los kilos consumidos en total por los animales
 				System.out.println(
 						"Introduzca los kilos de comida que comen todos los animales a diario (si tiene decimales, recuerde usar un punto)");
@@ -166,12 +197,11 @@ public class Ejercicio03 {
 				sc.nextLine();
 			}
 
-		} while (compradoCorrecto == false || animalCorrecto == false
-				|| kilosComidosCorrecto == false); /*
+		} while (kilosComidosCorrecto == false); /*
 													 * Se ejecutarán de nuevo las instrucciones del do, hasta que se
-													 * introduzcan todos los datos correctamente
+													 * introduzca el dato correctamente
 													 */
-		// Cerramos el Scanner
+// Cerramos el Scanner
 		sc.close();
 	}
 }
