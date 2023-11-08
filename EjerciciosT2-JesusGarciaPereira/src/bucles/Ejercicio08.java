@@ -21,9 +21,9 @@ public class Ejercicio08 {
 				if (otroNum <= numInicial) {
 					contFallos++;
 					if (otroNum < numInicial)
-						System.out.println("Fallo, es menor");
+						System.out.println("Fallo, es menor.");
 					else
-						System.out.println("Fallo, es igual");
+						System.out.println("Fallo, es igual.");
 				}
 			}
 		} while (otroNum != 0);
