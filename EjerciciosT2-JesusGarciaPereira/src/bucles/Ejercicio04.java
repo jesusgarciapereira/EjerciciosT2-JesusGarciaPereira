@@ -14,9 +14,9 @@ public class Ejercicio04 {
 		b = sc.nextInt();
 		for (int i = a; i >= 1; i--) {
 			if (a % i == 0 && b % i == 0) {
-				System.out.print("m.c.d.(" + a + "," + b + ") = " + i);
+				System.out.println("m.c.d.(" + a + "," + b + ") = " + i);
 				if (i == 1)
-					System.out.println(" | " + a + " y " + b + " son primos entre sí");
+					System.out.println(a + " y " + b + " son primos entre sí");
 				break;
 			}
 		}
