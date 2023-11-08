@@ -55,7 +55,7 @@ public class Ejercicio04 {
 					num = sc.nextInt();
 				}
 				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * Si he introducido un dato de tipo incorrecto se ejecutarán directamente las
 				 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
 				 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
 				 */

@@ -52,7 +52,7 @@ public class Ejercicio03 {
 		 */
 		int numAnimales = 0;
 		double comidaComprada = 0.0;
-		double kilosComidosTotal;
+		double kilosComidosTotal = 0.0;
 		// Declaramos la variable de kilos comidos por animal que mostraremos
 		double kilosComidosPorAnimal;
 		// Declaramos una variable boolean para determinar si hay comida
@@ -87,7 +87,7 @@ public class Ejercicio03 {
 					comidaComprada = sc.nextDouble();
 				}
 				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
+				 * Si he introducido un dato de tipo incorrecto se ejecutarán directamente las
 				 * instrucciones del catch y el valor de compradoCorrecto seguirá siendo false.
 				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
 				 * siguientes
@@ -134,12 +134,10 @@ public class Ejercicio03 {
 				// Para limpiar el Scanner
 				sc.nextLine();
 			}
-
 		} while (animalCorrecto == false); /*
 											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
 											 * el dato correctamente
 											 */
-
 		do {
 			try {
 				// Le pedimos al usuario los kilos consumidos en total por los animales
@@ -163,32 +161,7 @@ public class Ejercicio03 {
 				 * instrucciones siguientes
 				 */
 				kilosComidosCorrecto = true;
-				/*
-				 * Si la cantidad de comida comprada es igual o superior a la consumida por los
-				 * animales, el valor de hayComida es true; por el contrario, será false
-				 */
-				hayComida = (comidaComprada >= kilosComidosTotal) ? true : false;
-				// Si el número de animales es 0, mostraremos el siguiente mensaje
-				if (numAnimales == 0)
-					System.out.println("No hay animales en la granja que consuman la comida comprada");
-				// En caso contrario...
-				else {
-					// ... y, si el valor de hayComida es true, mostraremos el siguiente mensaje
-					if (hayComida)
-						System.out.println("Hoy disponemos de suficiente alimento para cada animal");
-					else { // ... y, si el valor de hayComida es false...
-							// ... y el valor de comidaComprada es 0, mostraremos el siguiente mensaje
-						if (comidaComprada == 0)
-							System.out.println("Hoy los animales no tienen nada que comer");
-						else { // ... y el valor de comidaComprada no es 0
-								// Establecemos la relación entre las variables
-							kilosComidosPorAnimal = comidaComprada / numAnimales;
-							// Y mostraremos el siguiente resultado
-							System.out.println(
-									"Hoy sería necesario racionarla a " + kilosComidosPorAnimal + " kg por animal");
-						}
-					}
-				}
+
 				// Si he introducido algún dato incorrecto...
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
@@ -200,6 +173,31 @@ public class Ejercicio03 {
 													 * Se ejecutarán de nuevo las instrucciones del do, hasta que se
 													 * introduzca el dato correctamente
 													 */
+		/*
+		 * Si la cantidad de comida comprada es igual o superior a la consumida por los
+		 * animales, el valor de hayComida es true; por el contrario, será false
+		 */
+		hayComida = (comidaComprada >= kilosComidosTotal) ? true : false;
+		// Si el número de animales es 0, mostraremos el siguiente mensaje
+		if (numAnimales == 0)
+			System.out.println("No hay animales en la granja que consuman la comida comprada");
+		// En caso contrario...
+		else {
+			// ... y, si el valor de hayComida es true, mostraremos el siguiente mensaje
+			if (hayComida)
+				System.out.println("Hoy disponemos de suficiente alimento para cada animal");
+			else { // ... y, si el valor de hayComida es false...
+					// ... y el valor de comidaComprada es 0, mostraremos el siguiente mensaje
+				if (comidaComprada == 0)
+					System.out.println("Hoy los animales no tienen nada que comer");
+				else { // ... y el valor de comidaComprada no es 0
+						// Establecemos la relación entre las variables
+					kilosComidosPorAnimal = comidaComprada / numAnimales;
+					// Y mostraremos el siguiente resultado
+					System.out.println("Hoy sería necesario racionarla a " + kilosComidosPorAnimal + " kg por animal");
+				}
+			}
+		}
 		// Cerramos el Scanner
 		sc.close();
 	}
