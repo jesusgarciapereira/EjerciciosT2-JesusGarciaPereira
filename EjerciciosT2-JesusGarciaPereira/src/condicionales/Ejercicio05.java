@@ -5,56 +5,58 @@ import java.util.Scanner;
 
 public class Ejercicio05 {
 
-	// ENTRADA: cinco | RESULTADO ESPERADO: El dato introducido no es correcto
-	// ENTRADA: 7.8 | RESULTADO ESPERADO: El dato introducido no es correcto
+	/*
+	 * ENTRADA: cinco | RESULTADO ESPERADO: El dato introducido no es del tipo
+	 * correcto
+	 * 
+	 * ENTRADA: 7.8 | RESULTADO ESPERADO: El dato introducido no es del tipo
+	 * correcto
+	 */
 	// ENTRADA: 4 | RESULTADO ESPERADO: 4
 	// ENTRADA: -3 | RESULTADO ESPERADO: 3
 	// ENTRADA: 0 | RESULTADO ESPERADO: 0
 
 	public static void main(String[] args) {
-		// Declaramos la variable del número que le pediremos al usuario
-		int num;
-		// Declaramos la variable del valor absoluto que mostraremos
+
+		// Declaramos las variables
+		int num = 0;
 		int valorAbsoluto;
-		/*
-		 * Declaramos una variable boolean para determinar si un dato ha sido
-		 * introducido correctamente
-		 */
 		boolean correcto = false;
+
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
+
 		// Presentamos el programa
 		System.out.println("Valor absoluto");
+		System.out.println("--------------");
+
 		do {
 			try {
-				// Le pedimos al usuario un número
+				// Le pedimos al usuario un número y lo leemos
 				System.out.println("Introduzca cualquier número entero");
-				// Leemos el número
 				num = sc.nextInt();
-				/*
-				 * Si he introducido un dato de tipo incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
-				 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
-				 */
+
+				// Asignamos este dato como correcto
 				correcto = true;
+
 				/*
-				 * Establecemos la relación entre las variables: Si el número es negativo, lo
-				 * multiplicaremos por -1, si no, lo asignamos tal cual
+				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner
 				 */
-				valorAbsoluto = (num < 0) ? num * -1 : num;
-				// Mostramos el resultado
-				System.out.println("|" + num + "| = " + valorAbsoluto);
-				// Si he introducido un dato incorrecto...
 			} catch (InputMismatchException e) {
-				// ... se mostrará el siguiente resultado
 				System.out.println("El dato introducido no es del tipo correcto");
-				// Para limpiar el Scanner
 				sc.nextLine();
 			}
-		} while (correcto == false); /*
-										 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca un
-										 * dato correcto
-										 */
+
+			// Mientras no sea correcto el dato, repetiremos las instrucciones
+		} while (!correcto);
+
+		// Establecemos la relación entre las variables
+		valorAbsoluto = num < 0 ? -num : num;
+
+		// Mostramos el resultado
+		System.out.println("|" + num + "| = " + valorAbsoluto);
+
 		// Cerramos el Scanner
 		sc.close();
 	}

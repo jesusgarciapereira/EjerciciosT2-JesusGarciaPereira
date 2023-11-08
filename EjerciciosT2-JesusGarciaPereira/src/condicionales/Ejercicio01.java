@@ -48,12 +48,15 @@ public class Ejercicio01 {
 				System.out.println("Introduzca un número entre 0 y 9999, analizaré si es capicúa o no");
 				num = sc.nextInt();
 
-				// Verificamos que número está dentro del rango válido
+				// Verificamos que el número está dentro del rango válido
 				while (num < 0 || num > 9999) {
 					System.out.println("Número incorrecto, sólo validos desde el 0 hasta el 9999");
 					System.out.println("Introduzca otro número");
 					num = sc.nextInt();
 				}
+				
+				// Asignamos el dato como correcto
+				correcto = true;
 
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
@@ -66,9 +69,6 @@ public class Ejercicio01 {
 
 			// Mientras no sea correcto el dato, repetiremos las instrucciones
 		} while (!correcto);
-
-		// Asignamos el dato como correcto
-		correcto = true;
 
 		// Verificamos si el número es capicúa
 		if (num < 10)

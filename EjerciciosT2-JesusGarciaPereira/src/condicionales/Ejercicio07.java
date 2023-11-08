@@ -35,158 +35,138 @@ public class Ejercicio07 {
 	 */
 
 	public static void main(String[] args) {
-		/*
-		 * Declaramos la variables de las horas, minutos y segundos que le pediremos al
-		 * usuario
-		 */
+
+		// Declaramos las variables
 		int horas = 0;
 		int minutos = 0;
-		int segundos;
-		/*
-		 * Declaramos tres variables boolean diferentes para determinar si cada uno de
-		 * los datos han sido introducidos correctamente
-		 */
+		int segundos = 0;
 		boolean horasCorrecto = false;
 		boolean minutosCorrecto = false;
 		boolean segundosCorrecto = false;
+
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
+
 		// Presentamos el programa
 		System.out.println("Hora mas un segundo");
+		System.out.println("-------------------");
+
 		do {
 			try {
-				// Le pedimos al usuario las horas
+
+				// Le pedimos al usuario el número de las horas y lo leemos
 				System.out.println("Introduzca el número correspondiente a las horas");
-				// Leemos el número
 				horas = sc.nextInt();
-				/*
-				 * Si el número se sale de los márgenes le indicamos el error y pediremos otro
-				 * todas las veces necesarias hasta que introduzca un número correcto
-				 */
+
+				// Verificamos que el número está dentro del rango válido
 				while (horas < 0 || horas > 23) {
 					System.out.println(
 							"Número incorrecto, para las horas sólo son validos números desde el 0 hasta el 23");
 					System.out.println("Introduzca otro número");
 					horas = sc.nextInt();
 				}
-				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de horasCorrecto seguirá siendo false. Por
-				 * el contrario se asignará como true y se ejecutarán las instrucciones
-				 * siguientes
-				 */
+
+				// Asignamos este dato como correcto
 				horasCorrecto = true;
+
+				/*
+				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner
+				 */
 			} catch (InputMismatchException e) {
-				// ... se mostrará el siguiente resultado
 				System.out.println("El dato introducido no es del tipo correcto");
-				// Para limpiar el Scanner
 				sc.nextLine();
 			}
-		} while (horasCorrecto == false); /*
-											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
-											 * el dato correctamente
-											 */
+
+			// Mientras no sea correcto el dato, repetiremos las instrucciones
+		} while (!horasCorrecto);
+
 		do {
 			try {
-				// Le pedimos al usuario los minutos
+
+				// Le pedimos al usuario el número de los minutos y lo leemos
 				System.out.println("Introduzca el número correspondiente a los minutos");
-				// Leemos el número
 				minutos = sc.nextInt();
-				/*
-				 * Si el número se sale de los márgenes le indicamos el error y pediremos otro
-				 * todas las veces necesarias hasta que introduzca un número correcto
-				 */
+
+				// Verificamos que el número está dentro del rango válido
 				while (minutos < 0 || minutos > 59) {
 					System.out.println(
 							"Número incorrecto, para los minutos sólo son validos números desde el 0 hasta el 59");
 					System.out.println("Introduzca otro número");
 					minutos = sc.nextInt();
 				}
-				/*
-				 * Si he introducido un dato incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de minutosCorrecto seguirá siendo false.
-				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
-				 * siguientes
-				 */
+
+				// Asignamos este dato como correcto
 				minutosCorrecto = true;
+
+				/*
+				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner
+				 */
 			} catch (InputMismatchException e) {
-				// ... se mostrará el siguiente resultado
 				System.out.println("El dato introducido no es del tipo correcto");
-				// Para limpiar el Scanner
 				sc.nextLine();
 			}
-		} while (minutosCorrecto == false); /*
-											 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca
-											 * el dato correctamente
-											 */
+
+			// Mientras no sea correcto el dato, repetiremos las instrucciones
+		} while (!minutosCorrecto);
+
 		do {
 			try {
-				// Le pedimos al usuario los segundos
+
+				// Le pedimos al usuario el número de los segundos y lo leemos
 				System.out.println("Introduzca el número correspondiente a los segundos");
-				// Leemos el número
 				segundos = sc.nextInt();
-				/*
-				 * Si el número se sale de los márgenes le indicamos el error y pediremos otro
-				 * todas las veces necesarias hasta que introduzca un número correcto
-				 */
+
+				// Verificamos que el número está dentro del rango válido
 				while (segundos < 0 || segundos > 59) {
 					System.out.println(
 							"Número incorrecto, para los segundos sólo son validos números desde el 0 hasta el 59");
 					System.out.println("Introduzca otro número");
 					segundos = sc.nextInt();
 				}
-				/*
-				 * Si he introducido un dato de tipo incorrecto se ejecutarán directamente las
-				 * instrucciones del catch y el valor de segundosCorrecto seguirá siendo false.
-				 * Por el contrario se asignará como true y se ejecutarán las instrucciones
-				 * siguientes
-				 */
+
+				// Asignamos este dato como correcto
 				segundosCorrecto = true;
-				// Mostramos la primera parte del resultado
-				System.out.print("Dentro de un segundo serán las ");
-				// Si el valor de los segundos es 59...
-				if (segundos == 59) {
-					// ... asignaremos el valor 0 a los segundos e incrementamos los minutos en 1
-					segundos = 0;
-					minutos++;
-				} else // Por el contrario incrementamos los segundos en 1
-					segundos++;
-				// Si el valor de los segundos es 60...
-				if (minutos == 60) {
-					// ... asignaremos el valor 0 a los minutos e incrementamos las horas en 1
-					minutos = 0;
-					horas++;
-				}
-				// Si el valor de las horas es 24...
-				if (horas == 24)
-					// ... le asignaremos el valor 0
-					horas = 0;
+
 				/*
-				 * La segunda parte del resultado se mostrará añadiendo un 0 a la izquierda de
-				 * los segundos y/o minutos en caso de que sus respectivos valores sean menores
-				 * de 10
+				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner
 				 */
-				if (minutos < 10 && segundos < 10)
-					System.out.println(horas + ":0" + minutos + ":0" + segundos);
-				else {
-					if (minutos < 10)
-						System.out.println(horas + ":0" + minutos + ":" + segundos);
-					else if (segundos < 10)
-						System.out.println(horas + ":" + minutos + ":0" + segundos);
-					else
-						System.out.println(horas + ":" + minutos + ":" + segundos);
-				}
-				// Si he introducido un dato incorrecto...
 			} catch (InputMismatchException e) {
-				// ... se mostrará el siguiente resultado
 				System.out.println("El dato introducido no es del tipo correcto");
-				// Para limpiar el Scanner
 				sc.nextLine();
 			}
-		} while (segundosCorrecto == false); /*
-												 * Se ejecutarán de nuevo las instrucciones del do, hasta que se
-												 * introduzca el dato correctamente
-												 */
+
+			// Mientras no sea correcto el dato, repetiremos las instrucciones
+		} while (!segundosCorrecto);
+
+		// Calculamos la hora que será un segundo después
+		if (segundos == 59) {
+			segundos = 0;
+			minutos++;
+		} else
+			segundos++;
+		if (minutos == 60) {
+			minutos = 0;
+			horas++;
+		}
+		if (horas == 24)
+			horas = 0;
+
+		// Mostramos el resultado
+		System.out.print("Dentro de un segundo serán las ");
+		if (minutos < 10 && segundos < 10)
+			System.out.println(horas + ":0" + minutos + ":0" + segundos);
+		else {
+			if (minutos < 10)
+				System.out.println(horas + ":0" + minutos + ":" + segundos);
+			else if (segundos < 10)
+				System.out.println(horas + ":" + minutos + ":0" + segundos);
+			else
+				System.out.println(horas + ":" + minutos + ":" + segundos);
+		}
+
 		// Cerramos el Scanner
 		sc.close();
 	}
