@@ -70,7 +70,7 @@ public class Ejercicio03 {
 						System.out.print(" ");
 					}
 					// Bucle for que se ejecutará desde el 1 hasta valor correspondiente a i
-					for (int k = 1; k <= i; k++) {
+					for (int j = 1; j <= i; j++) {
 						// En cada iteración mostramos un asterisco y espacio en blanco
 						System.out.print("*");
 						System.out.print(" ");
