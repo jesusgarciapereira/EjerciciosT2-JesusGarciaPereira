@@ -96,8 +96,8 @@ public class Ejercicio03 {
 				// Si he introducido algún dato incorrecto...
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
+				// Para limpiar el Scanner
 				sc.nextLine();
 			}
 		} while (compradoCorrecto == false); /*
@@ -130,8 +130,8 @@ public class Ejercicio03 {
 				// Si he introducido algún dato incorrecto...
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
+				// Para limpiar el Scanner
 				sc.nextLine();
 			}
 
@@ -192,16 +192,15 @@ public class Ejercicio03 {
 				// Si he introducido algún dato incorrecto...
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
+				// Para limpiar el Scanner
 				sc.nextLine();
 			}
-
 		} while (kilosComidosCorrecto == false); /*
 													 * Se ejecutarán de nuevo las instrucciones del do, hasta que se
 													 * introduzca el dato correctamente
 													 */
-// Cerramos el Scanner
+		// Cerramos el Scanner
 		sc.close();
 	}
 }

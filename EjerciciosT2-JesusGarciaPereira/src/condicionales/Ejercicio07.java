@@ -78,8 +78,8 @@ public class Ejercicio07 {
 				horasCorrecto = true;
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
+				// Para limpiar el Scanner
 				sc.nextLine();
 			}
 		} while (horasCorrecto == false); /*
@@ -111,8 +111,8 @@ public class Ejercicio07 {
 				minutosCorrecto = true;
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
+				// Para limpiar el Scanner
 				sc.nextLine();
 			}
 		} while (minutosCorrecto == false); /*
@@ -179,8 +179,8 @@ public class Ejercicio07 {
 				// Si he introducido un dato incorrecto...
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
+				// Para limpiar el Scanner
 				sc.nextLine();
 			}
 		} while (segundosCorrecto == false); /*

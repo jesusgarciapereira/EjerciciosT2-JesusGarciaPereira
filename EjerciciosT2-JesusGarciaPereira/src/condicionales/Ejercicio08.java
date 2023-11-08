@@ -83,8 +83,8 @@ public class Ejercicio08 {
 				// Si he introducido un dato incorrecto...
 							} catch (InputMismatchException e) {
 								// ... se mostrará el siguiente resultado
-								System.out.println("El dato introducido no es correcto");
-								// Para evitar un bucle infinito
+								System.out.println("El dato introducido no es del tipo correcto");
+								// Para limpiar el Scanner
 								sc.nextLine();
 							}
 						} while (distanciaCorrecto == false); /*
@@ -129,8 +129,8 @@ public class Ejercicio08 {
 				// Si he introducido un dato incorrecto...
 			} catch (InputMismatchException e) {
 				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
+				// Para limpiar el Scanner
 				sc.nextLine();
 			}
 		} while (diasCorrecto == false); /*
