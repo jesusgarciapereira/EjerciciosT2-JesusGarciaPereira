@@ -5,9 +5,13 @@ import java.util.Scanner;
 
 public class Ejercicio02 {
 
-	// ENTRADA: 34.5 | RESULTADO ESPERADO: El dato introducido no es correcto
-	// ENTRADA: n número | RESULTADO ESPERADO: El dato introducido no es correcto
 	/*
+	 * ENTRADA: 34.5 | RESULTADO ESPERADO: El dato introducido no es del tipo
+	 * correcto
+	 * 
+	 * ENTRADA: n número | RESULTADO ESPERADO: El dato introducido no es del tipo
+	 * correcto
+	 * 
 	 * ENTRADA: 0 | RESULTADO ESPERADO: Número incorrecto, sólo válidos a partir del
 	 * 1
 	 */
@@ -18,77 +22,67 @@ public class Ejercicio02 {
 
 	public static void main(String[] args) {
 
-		// Declaramos la variable del número que le pediremos al usuario
-		int n;
-		// Declaramos la variable del número de primos que mostraremos
+		// Declaramos las variables
+		int n = 0;
 		int contadorPrimos = 0;
-		// Declaramos una variable boolean para determinar si un número es primo
 		boolean esPrimo;
-		/*
-		 * Declaramos una variable boolean para determinar si un dato ha sido
-		 * introducido correctamente
-		 */
 		boolean correcto = false;
+
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
+
 		// Presentamos el programa
 		System.out.println("Cantidad de números primos entre 1 y n");
+		System.out.println("--------------------------------------");
+
 		do {
 			try {
-				// Le pedimos al usuario un valor para n
+
+				// Le pedimos al usuario un valor para n y lo leemos
 				System.out.println("Introduzca un valor para n");
-				// Leemos el número
 				n = sc.nextInt();
-				/*
-				 * Si el número se sale del margen le indicamos el error y pediremos otro todas
-				 * las veces necesarias hasta que introduzca un número correcto
-				 */
+
+				// Verificamos que el número está dentro del rango válido
 				while (n < 1) {
 					System.out.println("Número incorrecto, sólo válidos a partir del 1");
 					System.out.println("Introduzca otro número");
 					n = sc.nextInt();
-					/*
-					 * Si he introducido un dato de tipo incorrecto se ejecutarán directamente las
-					 * instrucciones del catch y el valor de correcto seguirá siendo false. Por el
-					 * contrario se asignará como true y se ejecutarán las instrucciones siguientes
-					 */
-					correcto = true;
 				}
-				// Bucle for que se ejecutará desde el 2 hasta valor asignado a n
-				for (int i = 2; i <= n; i++) {
-					// Asignamos el valor true a esPrimo
-					esPrimo = true;
-					/*
-					 * Bucle for que se ejecutará desde el 2 hasta valor correspondiente a la raíz
-					 * cuadrada de i
-					 */
-					for (int j = 2; j <= Math.sqrt(i); j++) {
-						// Si el valor de i es divisible por alguna j...
-						if (i % j == 0) {
-							// ... asignamos el valor false a esPrimo
-							esPrimo = false;
-							// Rompemos el bucle, que se cumpla la condición una sola vez es suficiente
-							break;
-						}
-					}
-					// Si esPrimo es true...
-					if (esPrimo)
-						// ... incrementamos el contador de números primos
-						contadorPrimos++;
-				}
-				// Mostramos el resultado
-				System.out.println("Entre el 1 y el " + n + " hay " + contadorPrimos + " número(s) primo(s)");
-				// Si he introducido un dato incorrecto...
+
+				// Asignamos este dato como correcto
+				correcto = true;
+
+				/*
+				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner
+				 */
 			} catch (InputMismatchException e) {
-				// ... se mostrará el siguiente resultado
-				System.out.println("El dato introducido no es correcto");
-				// Para evitar un bucle infinito
+				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
 			}
-		} while (correcto == false);/*
-									 * Se ejecutarán de nuevo las instrucciones del do, hasta que se introduzca el
-									 * dato correctamente
-									 */
+
+			// Mientras no sea correcto el dato, repetiremos las instrucciones
+		} while (!correcto);
+
+		// Bucle for para incrementar el contador de números primos
+		for (int i = 2; i <= n; i++) {
+			esPrimo = true;
+
+			// Bucle for para determinar si un número es primo
+			for (int j = 2; j <= Math.sqrt(i); j++) {
+				if (i % j == 0) {
+					esPrimo = false;
+					break;
+				}
+			}
+
+			if (esPrimo)
+				contadorPrimos++;
+		}
+
+		// Mostramos el resultado
+		System.out.println("Entre el 1 y el " + n + " hay " + contadorPrimos + " número(s) primo(s)");
+
 		// Cerramos el Scanner
 		sc.close();
 	}

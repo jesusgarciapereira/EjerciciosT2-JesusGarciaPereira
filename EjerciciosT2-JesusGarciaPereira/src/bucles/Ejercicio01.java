@@ -177,7 +177,7 @@ public class Ejercicio01 {
 			// Mientras no sea correcto el dato, repetiremos las instrucciones
 		} while (!segundosIncrementadosCorrecto);
 
-		// Bucle para calcular la hora después de incrementar los segundos
+		// Bucle for para calcular la hora después de incrementar los segundos
 		for (int i = 1; i <= segundosIncrementados; i++) {
 			if (segundos == 59) {
 				segundos = 0;
