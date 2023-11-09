@@ -26,7 +26,6 @@ public class Ejercicio02 {
 		int n = 0;
 		int contadorPrimos = 0;
 		boolean esPrimo;
-		boolean correcto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -39,18 +38,8 @@ public class Ejercicio02 {
 			try {
 
 				// Le pedimos al usuario un valor para n y lo leemos
-				System.out.println("Introduzca un valor para n");
+				System.out.println("Introduzca un valor para n, a partir de 1");
 				n = sc.nextInt();
-
-				// Verificamos que el número está dentro del rango válido
-				while (n < 1) {
-					System.out.println("Número incorrecto, sólo válidos a partir del 1");
-					System.out.println("Introduzca otro número");
-					n = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				correcto = true;
 
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
@@ -61,8 +50,8 @@ public class Ejercicio02 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correcto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (n < 1);
 
 		// Bucle for para incrementar el contador de números primos
 		for (int i = 2; i <= n; i++) {

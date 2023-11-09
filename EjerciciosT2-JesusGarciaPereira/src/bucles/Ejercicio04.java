@@ -28,8 +28,6 @@ public class Ejercicio04 {
 		int a = 0;
 		int b = 0;
 		int numMenor;
-		boolean correctoA = false;
-		boolean correctoB = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -45,16 +43,6 @@ public class Ejercicio04 {
 				System.out.println("Introduzca un valor para a");
 				a = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (a < 1) {
-					System.out.println("Número incorrecto, sólo válidos a partir del 1");
-					System.out.println("Introduzca otro número");
-					a = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				correctoA = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -64,8 +52,8 @@ public class Ejercicio04 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correctoA);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (a < 1);
 
 		do {
 			try {
@@ -74,16 +62,6 @@ public class Ejercicio04 {
 				System.out.println("Introduzca un valor para b");
 				b = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (b < 1) {
-					System.out.println("Número incorrecto, sólo válidos a partir del 1");
-					System.out.println("Introduzca otro número");
-					b = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				correctoB = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -93,8 +71,8 @@ public class Ejercicio04 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correctoB);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (b < 1);
 
 		// Establecemos la relación entre las variables
 		numMenor = a <= b ? a : b;

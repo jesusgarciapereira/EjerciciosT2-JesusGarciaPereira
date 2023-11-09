@@ -34,7 +34,6 @@ public class Ejercicio03 {
 
 		// Declaramos las variables
 		int n = 0;
-		boolean correcto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -50,16 +49,6 @@ public class Ejercicio03 {
 				System.out.println("Introduzca un valor para n");
 				n = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (n < 0) {
-					System.out.println("Número incorrecto, sólo válidos a partir del 0");
-					System.out.println("Introduzca otro número");
-					n = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				correcto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -69,8 +58,8 @@ public class Ejercicio03 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correcto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (n < 0);
 
 		// Mostramos el resultado
 		System.out.println("He aquí un triángulo de base y altura " + n + ":");
@@ -83,7 +72,7 @@ public class Ejercicio03 {
 			// Bucle for para las instrucciones de cada fila
 			for (int i = 1; i <= n; i++) {
 
-				// Bucle for para mostrar los espacios que preceden a los asteríscos
+				// Bucle for para mostrar los espacios que preceden al primer asterísco
 				for (int j = 1; j <= n - i; j++) {
 					System.out.print(" ");
 				}
