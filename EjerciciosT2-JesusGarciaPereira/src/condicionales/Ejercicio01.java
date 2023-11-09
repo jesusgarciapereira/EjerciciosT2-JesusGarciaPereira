@@ -32,7 +32,6 @@ public class Ejercicio01 {
 		// Declaramos las variables
 		int num = 0;
 		boolean esCapicua = false;
-		boolean correcto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -48,16 +47,6 @@ public class Ejercicio01 {
 				System.out.println("Introduzca un número entre 0 y 9999, analizaré si es capicúa o no");
 				num = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (num < 0 || num > 9999) {
-					System.out.println("Número incorrecto, sólo validos desde el 0 hasta el 9999");
-					System.out.println("Introduzca otro número");
-					num = sc.nextInt();
-				}
-				
-				// Asignamos el dato como correcto
-				correcto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -67,8 +56,8 @@ public class Ejercicio01 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correcto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (num < 0 || num > 9999);
 
 		// Verificamos si el número es capicúa
 		if (num < 10)
