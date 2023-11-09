@@ -17,14 +17,14 @@ public class Ejercicio08 {
 	 * ENTRADA: 234,6 | RESULTADO ESPERADO: El dato introducido no es del tipo
 	 * correcto
 	 *
-	 * ENTRADA: 0 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números
-	 * mayores que 0
+	 * ENTRADA: 0 | RESULTADO ESPERADO: Indique la distancia del trayecto en km
+	 * (mayor que 0)
 	 * 
 	 * ENTRADA: 100 unos cuantos | RESULTADO ESPERADO: El dato introducido no es
 	 * correcto
 	 * 
-	 * ENTRADA: 100 -3 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números
-	 * desde el 0
+	 * ENTRADA: 100 -3 | RESULTADO ESPERADO: Indique el número de días de instancia
+	 * (a partir de 0)
 	 * 
 	 * ENTRADA: 100 5 | RESULTADO ESPERADO: El precio total sería de 250.0€
 	 *
@@ -45,7 +45,7 @@ public class Ejercicio08 {
 
 		// Declaramos las variables
 		double distancia = 0.0;
-		int dias = 0;
+		int dias = -1;
 		double precioSinDescuento, precioConDescuento;
 
 		// Activamos el Scanner
@@ -62,7 +62,7 @@ public class Ejercicio08 {
 			try {
 
 				// Le pedimos al usuario la distancia y la leemos
-				System.out.println("Indique la distancia del trayecto en km");
+				System.out.println("Indique la distancia del trayecto en km (mayor que 0)");
 				System.out.println("(si tiene decimales, use un punto como en el ejemplo 50.5)");
 				distancia = sc.nextDouble();
 
@@ -82,7 +82,7 @@ public class Ejercicio08 {
 			try {
 
 				// Le pedimos al usuario el número de días y lo leemos
-				System.out.println("Indique el número de días de instancia");
+				System.out.println("Indique el número de días de instancia (a partir de 0)");
 				dias = sc.nextInt();
 
 				/*

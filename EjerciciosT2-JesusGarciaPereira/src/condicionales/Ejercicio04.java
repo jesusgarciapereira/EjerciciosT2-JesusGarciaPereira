@@ -12,8 +12,8 @@ public class Ejercicio04 {
 	// ENTRADA: 56.4 | RESULTADO ESPERADO: El dato introducido no es del tipo
 	// correcto
 	/*
-	 * ENTRADA: 0 | RESULTADO ESPERADO: Número incorrecto, sólo validos desde el 1
-	 * hasta el 99
+	 * ENTRADA: 0 | RESULTADO ESPERADO: Introduzca un número entre 1 y 99, lo
+	 * mostraré con letras
 	 */
 	// ENTRADA: 6 | RESULTADO ESPERADO: seis
 	// ENTRADA: 10 | RESULTADO ESPERADO: diez

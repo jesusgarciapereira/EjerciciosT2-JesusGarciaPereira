@@ -21,14 +21,14 @@ public class Ejercicio03 {
 	 * ENTRADA: 100 3 Comen mucho | RESULTADO ESPERADO: El dato introducido no es
 	 * del tipo correcto
 	 *
-	 * ENTRADA: -1 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números desde
-	 * el 0
+	 * ENTRADA: -1 | RESULTADO ESPERADO: Introduzca la cantidad de comida comprada
+	 * hoy (en kg a partir de 0)
 	 * 
-	 * ENTRADA: 100 -1 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números
-	 * desde el 0
+	 * ENTRADA: 100 -1 | RESULTADO ESPERADO: Introduzca el número de animales que
+	 * hay en la granja (a partir de 0)
 	 * 
-	 * ENTRADA: 100 10 0 | RESULTADO ESPERADO: Dato incorrecto, sólo validos números
-	 * mayores que 0
+	 * ENTRADA: 100 10 0 | RESULTADO ESPERADO: Introduzca los kilos de comida que
+	 * comen todos los animales a diario (mayor que 0)
 	 * 
 	 * ENTRADA: 100 0 50 | RESULTADO ESPERADO: No hay animales en la granja que
 	 * consuman la comida comprada
@@ -49,9 +49,9 @@ public class Ejercicio03 {
 	public static void main(String[] args) {
 
 		// Declaramos las variables
-		int numAnimales = 0;
-		double comidaComprada = 0.0;
-		double kilosComidosTotal = 0.0;
+		int numAnimales = -1;
+		double comidaComprada = -1;
+		double kilosComidosTotal = 0;
 		double kilosComidosPorAnimal;
 		boolean hayComida;
 
@@ -69,8 +69,8 @@ public class Ejercicio03 {
 			try {
 
 				// Le pedimos al usuario la cantidad de comida comprada y la leemos
-				System.out.println("Introduzca la cantidad de comida comprada hoy ");
-				System.out.println("(en kg y, si tiene decimales, use un punto como en el ejemplo 100.5)");
+				System.out.println("Introduzca la cantidad de comida comprada hoy (en kg a partir de 0)");
+				System.out.println("(si tiene decimales, use un punto como en el ejemplo 100.5)");
 				comidaComprada = sc.nextDouble();
 
 				/*
@@ -89,7 +89,7 @@ public class Ejercicio03 {
 			try {
 
 				// Le pedimos al usuario el número de animales y lo leemos
-				System.out.println("Introduzca el número de animales que hay en la granja");
+				System.out.println("Introduzca el número de animales que hay en la granja (a partir de 0)");
 				numAnimales = sc.nextInt();
 
 				/*
@@ -110,7 +110,8 @@ public class Ejercicio03 {
 				 * Le pedimos al usuario los kilos consumidos en total por los animales y leemos
 				 * el número
 				 */
-				System.out.println("Introduzca los kilos de comida que comen todos los animales a diario");
+				System.out
+						.println("Introduzca los kilos de comida que comen todos los animales a diario (mayor que 0)");
 				System.out.println("(si tiene decimales, recuerde usar un punto)");
 				kilosComidosTotal = sc.nextDouble();
 
@@ -127,7 +128,6 @@ public class Ejercicio03 {
 		} while (kilosComidosTotal <= 0);
 
 		// Establecemos la relación entre estas variables
-
 		hayComida = comidaComprada >= kilosComidosTotal ? true : false;
 
 		// Mostramos el resultado

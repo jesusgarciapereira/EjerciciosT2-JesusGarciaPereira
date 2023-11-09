@@ -12,8 +12,8 @@ public class Ejercicio01 {
 	 * ENTRADA: Hola | RESULTADO ESPERADO: El dato introducido no es del tipo
 	 * correcto
 	 *
-	 * ENTRADA: -1 | RESULTADO ESPERADO: Número incorrecto, sólo validos desde el 0
-	 * hasta el 9999
+	 * ENTRADA: -1 | RESULTADO ESPERADO: Introduzca un número entre 0 y 9999,
+	 * analizaré si es capicúa o no
 	 */
 	// ENTRADA: 1 | RESULTADO ESPERADO: El número 1 es capicúa
 	// ENTRADA: 33 | RESULTADO ESPERADO: El número 33 es capicúa
@@ -23,14 +23,14 @@ public class Ejercicio01 {
 	// ENTRADA: 3553 | RESULTADO ESPERADO: El número 3553 es capicúa
 	// ENTRADA: 4564 | RESULTADO ESPERADO: El número 4564 no es capicúa
 	/*
-	 * ENTRADA: 10000 | RESULTADO ESPERADO: Número incorrecto, sólo validos desde el
-	 * 0 hasta el 9999
+	 * ENTRADA: 10000 | RESULTADO ESPERADO: Introduzca un número entre 0 y 9999,
+	 * analizaré si es capicúa o no
 	 */
 
 	public static void main(String[] args) {
 
 		// Declaramos las variables
-		int num = 0;
+		int num = -1;
 		boolean esCapicua = false;
 
 		// Activamos el Scanner

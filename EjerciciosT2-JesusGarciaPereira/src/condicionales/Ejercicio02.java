@@ -12,14 +12,14 @@ public class Ejercicio02 {
 	 * ENTRADA: Mi dni es 77816487 | RESULTADO ESPERADO: El dato introducido no es
 	 * del tipo correcto
 	 *
-	 * ENTRADA: 5687345 | RESULTADO ESPERADO: DNI incorrecto, sólo validos números
-	 * de 8 cifras
+	 * ENTRADA: 5687345 | RESULTADO ESPERADO: Introduzca su DNI (sólo las 8 cifras
+	 * numéricas)
 	 */
 	// ENTRADA: 77816487 | RESULTADO ESPERADO: Su NIF es: N
 	// ENTRADA: 27289684 | RESULTADO ESPERADO: Su NIF es: T
 	/*
-	 * ENTRADA: 100000000 | RESULTADO ESPERADO: DNI incorrecto, sólo validos números
-	 * de 8 cifras
+	 * ENTRADA: 100000000 | RESULTADO ESPERADO: Introduzca su DNI (sólo las 8 cifras
+	 * numéricas)
 	 */
 
 	public static void main(String[] args) {
@@ -54,7 +54,7 @@ public class Ejercicio02 {
 			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
 		} while (dni < 10000000 || dni > 99999999);
 
-		// Establecemos la relación entre las variables con un switch
+// Establecemos la relación entre las variables con un switch
 		nif = switch (dni % 23) {
 		case 0 -> 'T';
 		case 1 -> 'R';
@@ -82,11 +82,11 @@ public class Ejercicio02 {
 		default -> ' ';
 		};
 
-		// Mostramos el resultado
+// Mostramos el resultado
 		System.out.println("Su NIF es: " + nif);
 		System.out.println("El DNI completo sería: " + dni + "-" + nif);
 
-		// Cerramos el Scanner
+// Cerramos el Scanner
 		sc.close();
 	}
 }
