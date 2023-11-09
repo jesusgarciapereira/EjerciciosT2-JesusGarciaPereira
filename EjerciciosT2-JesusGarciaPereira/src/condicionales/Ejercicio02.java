@@ -27,7 +27,6 @@ public class Ejercicio02 {
 		// Declaramos las variables
 		int dni = 0;
 		char nif;
-		boolean correcto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -43,16 +42,6 @@ public class Ejercicio02 {
 				System.out.println("Introduzca su DNI (sólo las 8 cifras numéricas)");
 				dni = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (dni < 10000000 || dni > 99999999) {
-					System.out.println("DNI incorrecto, sólo validos números de 8 cifras");
-					System.out.println("Introdúzcalo de nuevo");
-					dni = sc.nextInt();
-				}
-				
-				// Asignamos el dato como correcto
-				correcto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -62,8 +51,8 @@ public class Ejercicio02 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correcto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (dni < 10000000 || dni > 99999999);
 
 		// Establecemos la relación entre las variables con un switch
 		nif = switch (dni % 23) {
