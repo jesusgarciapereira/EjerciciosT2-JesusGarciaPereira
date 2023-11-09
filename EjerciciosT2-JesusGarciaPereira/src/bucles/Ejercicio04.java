@@ -12,11 +12,9 @@ public class Ejercicio04 {
 	 * ENTRADA: un valor para a | RESULTADO ESPERADO: El dato introducido no es del
 	 * tipo correcto
 	 * 
-	 * ENTRADA: 0 | RESULTADO ESPERADO: Número incorrecto, sólo válidos a partir del
-	 * 1
+	 * ENTRADA: 0 | RESULTADO ESPERADO: Introduzca un valor para a (mayor que 0)
 	 * 
-	 * ENTRADA: 34 -4 | RESULTADO ESPERADO: Número incorrecto, sólo válidos a partir
-	 * del 1
+	 * ENTRADA: 34 -4 | RESULTADO ESPERADO: Introduzca un valor para b (mayor que 0)
 	 */
 	// ENTRADA: 320 180 | RESULTADO ESPERADO: m.c.d.(320,180) = 20
 	// ENTRADA: 400 125 | RESULTADO ESPERADO: m.c.d.(400,125) = 25
@@ -40,7 +38,7 @@ public class Ejercicio04 {
 			try {
 
 				// Le pedimos al usuario un valor para a y lo leemos
-				System.out.println("Introduzca un valor para a");
+				System.out.println("Introduzca un valor para a (mayor que 0)");
 				a = sc.nextInt();
 
 				/*
@@ -59,7 +57,7 @@ public class Ejercicio04 {
 			try {
 
 				// Le pedimos al usuario un valor para b y lo leemos
-				System.out.println("Introduzca un valor para b");
+				System.out.println("Introduzca un valor para b (mayor que 0)");
 				b = sc.nextInt();
 
 				/*
@@ -93,5 +91,4 @@ public class Ejercicio04 {
 		// Cerramos el Scanner
 		sc.close();
 	}
-
 }

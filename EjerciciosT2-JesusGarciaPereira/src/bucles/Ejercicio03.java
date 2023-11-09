@@ -12,8 +12,7 @@ public class Ejercicio03 {
 	 * ENTRADA: 2.2 | RESULTADO ESPERADO: El dato introducido no es del tipo
 	 * correcto
 	 * 
-	 * ENTRADA: -5 | RESULTADO ESPERADO: Número incorrecto, sólo válidos a partir
-	 * del 0
+	 * ENTRADA: -5 | RESULTADO ESPERADO: Introduzca un valor para n
 	 *
 	 * ENTRADA: 0 | RESULTADO ESPERADO: Exacto, con base y altura 0 no hay nada que
 	 * mostrar...
@@ -33,7 +32,7 @@ public class Ejercicio03 {
 	public static void main(String[] args) {
 
 		// Declaramos las variables
-		int n = 0;
+		int n = -1;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -90,5 +89,4 @@ public class Ejercicio03 {
 		// Cerramos el Scanner
 		sc.close();
 	}
-
 }

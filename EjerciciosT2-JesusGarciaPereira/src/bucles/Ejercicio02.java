@@ -12,8 +12,7 @@ public class Ejercicio02 {
 	 * ENTRADA: n número | RESULTADO ESPERADO: El dato introducido no es del tipo
 	 * correcto
 	 * 
-	 * ENTRADA: 0 | RESULTADO ESPERADO: Número incorrecto, sólo válidos a partir del
-	 * 1
+	 * ENTRADA: 0 | RESULTADO ESPERADO: Introduzca un valor para n (a partir de 1)
 	 */
 	// ENTRADA: 1 | RESULTADO ESPERADO: Entre el 1 y el 1 hay 0 número(s) primo(s)
 	// ENTRADA: 2 | RESULTADO ESPERADO: Entre el 1 y el 2 hay 1 número(s) primo(s)
@@ -38,7 +37,7 @@ public class Ejercicio02 {
 			try {
 
 				// Le pedimos al usuario un valor para n y lo leemos
-				System.out.println("Introduzca un valor para n, a partir de 1");
+				System.out.println("Introduzca un valor para n (a partir de 1)");
 				n = sc.nextInt();
 
 				/*

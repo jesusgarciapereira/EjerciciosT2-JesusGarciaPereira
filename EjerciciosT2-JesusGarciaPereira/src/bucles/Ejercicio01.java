@@ -18,34 +18,35 @@ public class Ejercicio01 {
 	 * ENTRADA: 5.9 | RESULTADO ESPERADO: El dato introducido no es del tipo
 	 * correcto
 	 *
-	 * ENTRADA: -1 | RESULTADO ESPERADO: Número incorrecto, para las horas sólo son
-	 * validos números desde el 0 hasta el 23
+	 * ENTRADA: -1 | RESULTADO ESPERADO: Introduzca el número correspondiente a las
+	 * horas (de 0 a 23)
 	 * 
-	 * ENTRADA: 22 89 | RESULTADO ESPERADO: Número incorrecto, para los minutos sólo
-	 * son validos números desde el 0 hasta el 59
+	 * ENTRADA: 22 89 | RESULTADO ESPERADO: Introduzca el número correspondiente a
+	 * los minutos (de 0 a 59)
 	 * 
-	 * ENTRADA: 14 59 70 | RESULTADO ESPERADO: Número incorrecto, para los segundos
-	 * sólo son validos números desde el 0 hasta el 59
+	 * ENTRADA: 14 59 70 | RESULTADO ESPERADO: Introduzca el número correspondiente
+	 * a los segundos (de 0 a 59)
 	 *
-	 * ENTRADA: 7 34 3 -1 | RESULTADO ESPERADO: Número incorrecto, sólo valores
-	 * desde el 0
+	 * ENTRADA: 7 34 3 -1 | RESULTADO ESPERADO: Introduzca la cantidad de segundos a
+	 * incrementar (a partir de 0)
 	 * 
-	 * ENTRADA: 13 5 32 0 | RESULTADO ESPERADO: Dentro de 0 segundos serán las
+	 * ENTRADA: 13 5 32 0 | RESULTADO ESPERADO: Dentro de 0 segundo(s) serán las
 	 * 13:05:32
 	 * 
-	 * ENTRADA: 5 57 54 15 | RESULTADO ESPERADO: Dentro de 15 segundos serán las
+	 * ENTRADA: 5 57 54 15 | RESULTADO ESPERADO: Dentro de 15 segundo(s) serán las
 	 * 5:58:09
 	 * 
-	 * ENTRADA: 23 59 56 7| RESULTADO ESPERADO: Dentro de 7 segundos serán las
+	 * ENTRADA: 23 59 56 7| RESULTADO ESPERADO: Dentro de 7 segundo(s) serán las
 	 * 0:00:03
 	 */
+	
 	public static void main(String[] args) {
 
 		// Declaramos las variables
-		int horas = 0;
-		int minutos = 0;
-		int segundos = 0;
-		int segundosIncrementados = 0;
+		int horas = -1;
+		int minutos = -1;
+		int segundos = -1;
+		int segundosIncrementados = -1;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -58,7 +59,7 @@ public class Ejercicio01 {
 			try {
 
 				// Le pedimos al usuario el número de las horas y lo leemos
-				System.out.println("Introduzca el número correspondiente a las horas");
+				System.out.println("Introduzca el número correspondiente a las horas (de 0 a 23)");
 				horas = sc.nextInt();
 
 				/*
@@ -77,7 +78,7 @@ public class Ejercicio01 {
 			try {
 
 				// Le pedimos al usuario el número de los minutos y lo leemos
-				System.out.println("Introduzca el número correspondiente a los minutos");
+				System.out.println("Introduzca el número correspondiente a los minutos (de 0 a 59)");
 				minutos = sc.nextInt();
 
 				/*
@@ -85,7 +86,7 @@ public class Ejercicio01 {
 				 * error y limpiamos el Scanner
 				 */
 			} catch (InputMismatchException e) {
-				System.out.println("El dato introducido no es del tipo correcto");
+				System.out.println("El dato introducido no es del tipo correcto (de 0 a 59)");
 				sc.nextLine();
 			}
 
@@ -96,7 +97,7 @@ public class Ejercicio01 {
 			try {
 
 				// Le pedimos al usuario el número de los segundos y lo leemos
-				System.out.println("Introduzca el número correspondiente a los segundos");
+				System.out.println("Introduzca el número correspondiente a los segundos (de 0 a 59)");
 				segundos = sc.nextInt();
 
 				/*
@@ -115,7 +116,7 @@ public class Ejercicio01 {
 			try {
 
 				// Le pedimos al usuario la cantidad segundos a incrementar y la leemos
-				System.out.println("Introduzca la cantidad de segundos a incrementar");
+				System.out.println("Introduzca la cantidad de segundos a incrementar (a partir de 0)");
 				segundosIncrementados = sc.nextInt();
 
 				/*
@@ -146,7 +147,7 @@ public class Ejercicio01 {
 		}
 
 		// Mostramos el resultado
-		System.out.print("Dentro de " + segundosIncrementados + " segundos serán las ");
+		System.out.print("Dentro de " + segundosIncrementados + " segundo(s) serán las ");
 		if (minutos < 10 && segundos < 10)
 			System.out.println(horas + ":0" + minutos + ":0" + segundos);
 		else {
