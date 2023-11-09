@@ -54,9 +54,6 @@ public class Ejercicio03 {
 		double kilosComidosTotal = 0.0;
 		double kilosComidosPorAnimal;
 		boolean hayComida;
-		boolean compradoCorrecto = false;
-		boolean animalCorrecto = false;
-		boolean kilosComidosCorrecto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -76,16 +73,6 @@ public class Ejercicio03 {
 				System.out.println("(en kg y, si tiene decimales, use un punto como en el ejemplo 100.5)");
 				comidaComprada = sc.nextDouble();
 
-				// Verificamos que la comida comprada está dentro del rango válido
-				while (comidaComprada < 0) {
-					System.out.println("Dato incorrecto, sólo validos números desde el 0");
-					System.out.println("Introduzca otro número");
-					comidaComprada = sc.nextDouble();
-				}
-
-				// Asignamos este dato como correcto
-				compradoCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -95,8 +82,8 @@ public class Ejercicio03 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!compradoCorrecto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (comidaComprada < 0);
 
 		do {
 			try {
@@ -105,16 +92,6 @@ public class Ejercicio03 {
 				System.out.println("Introduzca el número de animales que hay en la granja");
 				numAnimales = sc.nextInt();
 
-				// Verificamos que el número de animales está dentro del rango válido
-				while (numAnimales < 0) {
-					System.out.println("Dato incorrecto, sólo validos números desde el 0");
-					System.out.println("Introduzca otro número");
-					numAnimales = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				animalCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -124,8 +101,8 @@ public class Ejercicio03 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (animalCorrecto == false);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (numAnimales < 0);
 
 		do {
 			try {
@@ -137,16 +114,6 @@ public class Ejercicio03 {
 				System.out.println("(si tiene decimales, recuerde usar un punto)");
 				kilosComidosTotal = sc.nextDouble();
 
-				// Verificamos que los kilos consumidos en total están dentro del rango válido
-				while (kilosComidosTotal <= 0) {
-					System.out.println("Dato incorrecto, sólo validos números mayores que 0");
-					System.out.println("Introduzca otro número");
-					kilosComidosTotal = sc.nextDouble();
-				}
-
-				// Asignamos este dato como correcto
-				kilosComidosCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -156,8 +123,8 @@ public class Ejercicio03 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (kilosComidosCorrecto == false);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (kilosComidosTotal <= 0);
 
 		// Establecemos la relación entre estas variables
 

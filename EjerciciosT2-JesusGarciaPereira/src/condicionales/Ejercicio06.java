@@ -25,7 +25,7 @@ public class Ejercicio06 {
 		// Declaramos las variables
 		int aleatorio1, aleatorio2;
 		int suma = 0;
-		boolean valido = false;
+		boolean correcto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -54,7 +54,7 @@ public class Ejercicio06 {
 				suma = sc.nextInt();
 
 				// Asignamos este dato como correcto
-				valido = true;
+				correcto = true;
 
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
@@ -66,7 +66,7 @@ public class Ejercicio06 {
 			}
 
 			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!valido);
+		} while (!correcto);
 
 		// Mostramos el resultado
 		System.out.print(suma == aleatorio1 + aleatorio2 ? "¡Correcto! " : "Lo siento, la solución es ");

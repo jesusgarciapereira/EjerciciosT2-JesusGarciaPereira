@@ -47,8 +47,6 @@ public class Ejercicio08 {
 		double distancia = 0.0;
 		int dias = 0;
 		double precioSinDescuento, precioConDescuento;
-		boolean distanciaCorrecto = false;
-		boolean diasCorrecto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -68,16 +66,6 @@ public class Ejercicio08 {
 				System.out.println("(si tiene decimales, use un punto como en el ejemplo 50.5)");
 				distancia = sc.nextDouble();
 
-				// Verificamos que la distancia está dentro del rango válido
-				while (distancia <= 0) {
-					System.out.println("Dato incorrecto, sólo validos números mayores que 0");
-					System.out.println("Introduzca otro número");
-					distancia = sc.nextDouble();
-				}
-
-				// Asignamos este dato como correcto
-				distanciaCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -87,8 +75,8 @@ public class Ejercicio08 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!distanciaCorrecto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (distancia <= 0);
 
 		do {
 			try {
@@ -97,16 +85,6 @@ public class Ejercicio08 {
 				System.out.println("Indique el número de días de instancia");
 				dias = sc.nextInt();
 
-				// Verificamos que el número de días está dentro del rango válido
-				while (dias < 0) {
-					System.out.println("Dato incorrecto, sólo validos números desde el 0");
-					System.out.println("Introduzca otro número");
-					dias = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				diasCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -116,8 +94,8 @@ public class Ejercicio08 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!diasCorrecto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (dias < 0);
 
 		// Calculamos el precio sin descuento
 		precioSinDescuento = distancia * PRECIO_POR_KILOMETRO;

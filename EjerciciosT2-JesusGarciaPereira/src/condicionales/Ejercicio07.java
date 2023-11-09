@@ -40,9 +40,6 @@ public class Ejercicio07 {
 		int horas = 0;
 		int minutos = 0;
 		int segundos = 0;
-		boolean horasCorrecto = false;
-		boolean minutosCorrecto = false;
-		boolean segundosCorrecto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -58,17 +55,6 @@ public class Ejercicio07 {
 				System.out.println("Introduzca el número correspondiente a las horas");
 				horas = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (horas < 0 || horas > 23) {
-					System.out.println(
-							"Número incorrecto, para las horas sólo son validos números desde el 0 hasta el 23");
-					System.out.println("Introduzca otro número");
-					horas = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				horasCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -78,8 +64,8 @@ public class Ejercicio07 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!horasCorrecto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (horas < 0 || horas > 23) ;
 
 		do {
 			try {
@@ -88,17 +74,6 @@ public class Ejercicio07 {
 				System.out.println("Introduzca el número correspondiente a los minutos");
 				minutos = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (minutos < 0 || minutos > 59) {
-					System.out.println(
-							"Número incorrecto, para los minutos sólo son validos números desde el 0 hasta el 59");
-					System.out.println("Introduzca otro número");
-					minutos = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				minutosCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -108,8 +83,8 @@ public class Ejercicio07 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!minutosCorrecto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (minutos < 0 || minutos > 59);
 
 		do {
 			try {
@@ -118,17 +93,6 @@ public class Ejercicio07 {
 				System.out.println("Introduzca el número correspondiente a los segundos");
 				segundos = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (segundos < 0 || segundos > 59) {
-					System.out.println(
-							"Número incorrecto, para los segundos sólo son validos números desde el 0 hasta el 59");
-					System.out.println("Introduzca otro número");
-					segundos = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				segundosCorrecto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -138,8 +102,8 @@ public class Ejercicio07 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!segundosCorrecto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (segundos < 0 || segundos > 59);
 
 		// Calculamos la hora que será un segundo después
 		if (segundos == 59) {

@@ -31,7 +31,6 @@ public class Ejercicio04 {
 		// Declaramos las variables
 		int num = 0;
 		String unidadTexto, decenaTexto, apartesTexto;
-		boolean correcto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -47,16 +46,6 @@ public class Ejercicio04 {
 				System.out.println("Introduzca un número entre 1 y 99, lo mostraré con letras");
 				num = sc.nextInt();
 
-				// Verificamos que el número está dentro del rango válido
-				while (num < 1 || num > 99) {
-					System.out.println("Número incorrecto, sólo validos desde el 1 hasta el 99");
-					System.out.println("Introduzca otro número");
-					num = sc.nextInt();
-				}
-
-				// Asignamos este dato como correcto
-				correcto = true;
-
 				/*
 				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
 				 * error y limpiamos el Scanner
@@ -66,10 +55,10 @@ public class Ejercicio04 {
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correcto);
+			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
+		} while (num < 1 || num > 99);
 
-		// Establecemos la relación entre las variables con un switch cada uno
+		// Establecemos la relación entre las variables con un switch en cada uno
 		unidadTexto = switch (num % 10) {
 		case 1 -> "uno";
 		case 2 -> "dos";
