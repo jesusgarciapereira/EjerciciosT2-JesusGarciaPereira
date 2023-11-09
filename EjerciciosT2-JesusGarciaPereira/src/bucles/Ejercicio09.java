@@ -11,7 +11,7 @@ public class Ejercicio09 {
 		System.out.println("Número de dígitos");
 		System.out.println("Introduzca un número mayor que 0");
 		num = sc.nextInt();
-		while(num!=0) {
+		while(num>0) {
 			num = num /10;
 			contCifras++;
 		}

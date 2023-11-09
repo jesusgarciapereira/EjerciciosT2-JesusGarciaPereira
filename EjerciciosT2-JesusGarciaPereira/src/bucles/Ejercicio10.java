@@ -14,7 +14,7 @@ public class Ejercicio10 {
 		System.out.println("Introduzca un número mayor que 0");
 		num = sc.nextInt();
 		numAuxiliar = num;
-		while (numAuxiliar != 0) {
+		while (numAuxiliar > 0) {
 			resto = numAuxiliar % 10;
 			numInverso = numInverso * 10 + resto;
 			numAuxiliar = numAuxiliar / 10;
