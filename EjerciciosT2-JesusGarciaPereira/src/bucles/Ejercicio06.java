@@ -15,7 +15,9 @@ public class Ejercicio06 {
 			System.out.println("Introduzca otro número");
 			n = sc.nextInt();
 		}
+		//filas
 		for (int i = 1; i <= n; i++) {
+			//columnas
 			for (int j = 1; j <= i; j++) {
 				System.out.print(i);
 			}
