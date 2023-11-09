@@ -18,7 +18,7 @@ public class Ejercicio05 {
 		// Presentamos el programa
 		System.out.println("Mínimo común múltiplo de a y b");
 		System.out.println("------------------------------");
-		
+
 		do {
 			try {
 
@@ -60,12 +60,14 @@ public class Ejercicio05 {
 		// Establecemos la relación entre las variables
 		numMayor = a >= b ? a : b;
 
-		for (int i = numMayor;; i++) {
-			if (i % a == 0 && i % b == 0) {
-				System.out.println("m.c.m.(" + a + "," + b + ") = " + i);
-				break;
-			}
-		}
+		// Bucle while para determinar un múltiplo de a y b
+		while (numMayor % a != 0 || numMayor % b != 0)
+			numMayor++;
+
+		// Mostramos el resultado
+		System.out.println("m.c.m.(" + a + "," + b + ") = " + numMayor);
+
+		// Cerramos el Scanner
 		sc.close();
 	}
 
