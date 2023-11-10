@@ -18,8 +18,10 @@ public class Ejercicio04 {
 	 */
 	// ENTRADA: 320 180 | RESULTADO ESPERADO: m.c.d.(320,180) = 20
 	// ENTRADA: 400 125 | RESULTADO ESPERADO: m.c.d.(400,125) = 25
-	// ENTRADA: 1024 625 | RESULTADO ESPERADO: m.c.d.(1024,625) = 1
-
+	/*
+	 * ENTRADA: 1024 625 | RESULTADO ESPERADO: m.c.d.(1024,625) = 1 
+	 *                                         1024 y 625 son primos entre sí
+	 */
 	public static void main(String[] args) {
 
 		// Declaramos las variables

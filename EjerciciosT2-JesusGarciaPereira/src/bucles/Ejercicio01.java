@@ -86,7 +86,7 @@ public class Ejercicio01 {
 				 * error y limpiamos el Scanner
 				 */
 			} catch (InputMismatchException e) {
-				System.out.println("El dato introducido no es del tipo correcto (de 0 a 59)");
+				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
 			}
 

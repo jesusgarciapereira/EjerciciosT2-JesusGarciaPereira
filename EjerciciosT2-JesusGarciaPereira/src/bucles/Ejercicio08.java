@@ -18,7 +18,7 @@ public class Ejercicio08 {
 	// ENTRADA: 6 6 | RESULTADO ESPERADO: Fallo, es igual
 	/*
 	 * ENTRADA: 20 23 22 22 0 | RESULTADO ESPERADO: Total números introducidos: 4
-	 *                                              Números fallados: 2
+	 * Números fallados: 2
 	 */
 
 	public static void main(String[] args) {
@@ -61,6 +61,12 @@ public class Ejercicio08 {
 
 			do {
 				try {
+
+					/*
+					 * Para que no te muestre el texto "Fallo, es igual" en caso de introducir un
+					 * tipo incorrecto
+					 */
+					numAuxiliar = -1;
 
 					// Le pedimos al usuario un nuevo número y lo leemos
 					System.out.print("Dime un número: ");

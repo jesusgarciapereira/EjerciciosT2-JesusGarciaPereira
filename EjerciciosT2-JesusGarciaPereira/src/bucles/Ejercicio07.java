@@ -15,9 +15,17 @@ public class Ejercicio07 {
 	// ENTRADA: -1 | RESULTADO ESPERADO: Introduzca un valor para n (mayor que 0)
 	// ENTRADA: 0 | RESULTADO ESPERADO: Con n asignado a 0 no hay nada que mostrar
 	/*
-	 * ENTRADA: 4 | RESULTADO ESPERADO: 1 121 12321 1234321
+	 * ENTRADA: 4 | RESULTADO ESPERADO: 1 
+	 *                                 121 
+	 *                                12321 
+	 *                               1234321
 	 * 
-	 * ENTRADA: 6 | RESULTADO ESPERADO: 1 121 12321 1234321 123454321 12345654321
+	 * ENTRADA: 6 | RESULTADO ESPERADO: 1 
+	 *                                 121
+	 *                                12321
+	 *                               1234321
+	 *                              123454321
+	 *                             12345654321
 	 */
 	// ENTRADA: 21 | RESULTADO ESPERADO: Introduzca un valor para n (entre 0 y 20)
 
