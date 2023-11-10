@@ -44,7 +44,7 @@ public class Ejercicio08 {
 		final int POR_CIENTO_DESCUENTO = 30;
 
 		// Declaramos las variables
-		double distancia = 0.0;
+		double distancia = 0;
 		int dias = -1;
 		double precioSinDescuento, precioConDescuento;
 

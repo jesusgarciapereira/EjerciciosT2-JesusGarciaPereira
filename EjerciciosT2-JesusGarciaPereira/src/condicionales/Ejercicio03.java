@@ -53,7 +53,6 @@ public class Ejercicio03 {
 		double comidaComprada = -1;
 		double kilosComidosTotal = 0;
 		double kilosComidosPorAnimal;
-		boolean hayComida;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -127,20 +126,17 @@ public class Ejercicio03 {
 			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
 		} while (kilosComidosTotal <= 0);
 
-		// Establecemos la relación entre estas variables
-		hayComida = comidaComprada >= kilosComidosTotal ? true : false;
-
 		// Mostramos el resultado
 		if (numAnimales == 0)
 			System.out.println("No hay animales en la granja que consuman la comida comprada");
 		else {
-			if (hayComida)
+			if (comidaComprada >= kilosComidosTotal)
 				System.out.println("Hoy disponemos de suficiente alimento para cada animal");
 			else {
 				if (comidaComprada == 0)
 					System.out.println("Hoy los animales no tienen nada que comer");
 				else {
-					// Establecemos la relación entre estas variables
+					// Establecemos la relación entre las variables
 					kilosComidosPorAnimal = comidaComprada / numAnimales;
 					System.out.println("Hoy sería necesario racionarla a " + kilosComidosPorAnimal + " kg por animal");
 				}

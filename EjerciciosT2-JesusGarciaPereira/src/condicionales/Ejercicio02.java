@@ -54,7 +54,7 @@ public class Ejercicio02 {
 			// Mientras el número no esté dentro del rango, repetiremos las instrucciones
 		} while (dni < 10000000 || dni > 99999999);
 
-// Establecemos la relación entre las variables con un switch
+		// Establecemos la relación entre las variables con un switch
 		nif = switch (dni % 23) {
 		case 0 -> 'T';
 		case 1 -> 'R';
@@ -82,11 +82,11 @@ public class Ejercicio02 {
 		default -> ' ';
 		};
 
-// Mostramos el resultado
+		// Mostramos el resultado
 		System.out.println("Su NIF es: " + nif);
 		System.out.println("El DNI completo sería: " + dni + "-" + nif);
 
-// Cerramos el Scanner
+		// Cerramos el Scanner
 		sc.close();
 	}
 }
