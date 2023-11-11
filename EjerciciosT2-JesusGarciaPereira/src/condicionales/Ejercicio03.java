@@ -127,6 +127,11 @@ public class Ejercicio03 {
 		} while (kilosComidosTotal <= 0);
 
 		// Mostramos el resultado
+		System.out.println("Comida comprada: " + comidaComprada + " kg");
+		System.out.println("Animales en la granja: " + numAnimales);
+		System.out.println("Comida consumida en total: " + kilosComidosTotal + " kg");
+		System.out.println();
+		
 		if (numAnimales == 0)
 			System.out.println("No hay animales en la granja que consuman la comida comprada");
 		else {
