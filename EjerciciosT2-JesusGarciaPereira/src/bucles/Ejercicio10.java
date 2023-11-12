@@ -52,10 +52,8 @@ public class Ejercicio10 {
 				System.out.println("Introduzca un número (a partir de 0)");
 				num = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();

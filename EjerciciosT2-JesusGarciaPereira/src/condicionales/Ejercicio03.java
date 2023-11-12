@@ -72,10 +72,8 @@ public class Ejercicio03 {
 				System.out.println("(si tiene decimales, use un punto como en el ejemplo 100.5)");
 				comidaComprada = sc.nextDouble();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
@@ -91,10 +89,8 @@ public class Ejercicio03 {
 				System.out.println("Introduzca el número de animales que hay en la granja (a partir de 0)");
 				numAnimales = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
@@ -105,19 +101,16 @@ public class Ejercicio03 {
 
 		do {
 			try {
-				/*
-				 * Le pedimos al usuario los kilos consumidos en total por los animales y leemos
-				 * el número
-				 */
+				
+				/* Le pedimos al usuario los kilos consumidos en total por los animales y leemos
+				 * el número */
 				System.out
 						.println("Introduzca los kilos de comida que comen todos los animales a diario (mayor que 0)");
 				System.out.println("(si tiene decimales, recuerde usar un punto)");
 				kilosComidosTotal = sc.nextDouble();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();

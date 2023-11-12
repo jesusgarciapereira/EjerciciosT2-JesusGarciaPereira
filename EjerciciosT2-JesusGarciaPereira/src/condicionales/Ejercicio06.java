@@ -25,7 +25,7 @@ public class Ejercicio06 {
 		// Declaramos las variables
 		int aleatorio1, aleatorio2;
 		int suma = 0;
-		boolean correcto = false;
+		boolean tipoCorrecto = false;
 
 		// Activamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -41,7 +41,6 @@ public class Ejercicio06 {
 		Random r = new Random();
 
 		// Generamos dos números aleatorios en el rango [1, 99] y los mostramos
-
 		aleatorio1 = r.nextInt(1, 100);
 		aleatorio2 = r.nextInt(1, 100);
 		System.out.println(aleatorio1 + " + " + aleatorio2 + " = ¿?");
@@ -54,19 +53,17 @@ public class Ejercicio06 {
 				suma = sc.nextInt();
 
 				// Asignamos este dato como correcto
-				correcto = true;
+				tipoCorrecto = true;
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
 			}
 
-			// Mientras no sea correcto el dato, repetiremos las instrucciones
-		} while (!correcto);
+			// Mientras el dato no sea del tipo correcto, repetiremos las instrucciones
+		} while (!tipoCorrecto);
 
 		// Mostramos el resultado
 		System.out.print(suma == aleatorio1 + aleatorio2 ? "¡Correcto! " : "Lo siento, la solución es ");

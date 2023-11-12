@@ -39,10 +39,8 @@ public class Ejercicio05 {
 				// Asignamos este dato como correcto
 				correcto = true;
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();

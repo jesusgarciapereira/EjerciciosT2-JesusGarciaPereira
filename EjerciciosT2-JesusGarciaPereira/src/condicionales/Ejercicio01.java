@@ -47,10 +47,8 @@ public class Ejercicio01 {
 				System.out.println("Introduzca un número entre 0 y 9999, analizaré si es capicúa o no");
 				num = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();

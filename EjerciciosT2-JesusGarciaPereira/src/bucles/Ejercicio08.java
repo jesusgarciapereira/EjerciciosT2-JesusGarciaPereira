@@ -43,10 +43,8 @@ public class Ejercicio08 {
 				System.out.print("Dime un número inicial: ");
 				num = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
@@ -62,20 +60,16 @@ public class Ejercicio08 {
 			do {
 				try {
 
-					/*
-					 * Para que no te muestre el texto "Fallo, es igual" en caso de introducir un
-					 * tipo incorrecto
-					 */
+					/* Para que no te muestre el texto "Fallo, es igual" en caso de introducir un
+					 * tipo incorrecto */
 					numAuxiliar = -1;
 
 					// Le pedimos al usuario un nuevo número y lo leemos
 					System.out.print("Dime un número: ");
 					numAuxiliar = sc.nextInt();
 
-					/*
-					 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-					 * error y limpiamos el Scanner
-					 */
+					/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+					 * error y limpiamos el Scanner */
 				} catch (InputMismatchException e) {
 					System.out.println("El dato introducido no es del tipo correcto");
 					sc.nextLine();

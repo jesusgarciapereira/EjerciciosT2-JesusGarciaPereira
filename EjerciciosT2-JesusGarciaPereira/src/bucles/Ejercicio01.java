@@ -62,10 +62,8 @@ public class Ejercicio01 {
 				System.out.println("Introduzca el número correspondiente a las horas (de 0 a 23)");
 				horas = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
@@ -81,10 +79,8 @@ public class Ejercicio01 {
 				System.out.println("Introduzca el número correspondiente a los minutos (de 0 a 59)");
 				minutos = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
@@ -100,10 +96,8 @@ public class Ejercicio01 {
 				System.out.println("Introduzca el número correspondiente a los segundos (de 0 a 59)");
 				segundos = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
@@ -119,10 +113,8 @@ public class Ejercicio01 {
 				System.out.println("Introduzca la cantidad de segundos a incrementar (a partir de 0)");
 				segundosIncrementados = sc.nextInt();
 
-				/*
-				 * Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
-				 * error y limpiamos el Scanner
-				 */
+				/* Si el usuario ingresa un dato del tipo incorrecto, mostramos un mensaje de
+				 * error y limpiamos el Scanner */
 			} catch (InputMismatchException e) {
 				System.out.println("El dato introducido no es del tipo correcto");
 				sc.nextLine();
